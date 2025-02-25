@@ -1,3 +1,1 @@
-create database resgate_animal;
-
-use resgate_animal;
+use Resgate_Animal
