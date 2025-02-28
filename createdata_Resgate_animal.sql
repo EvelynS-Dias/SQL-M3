@@ -37,5 +37,15 @@ create table padrinho(
  nome VARCHAR(150) NOT NULL,
  CPF CHAR(12) UNIQUE NOT NULL,
  RG CHAR(9) UNIQUE NOT NULL,
- telefone INTEGER
+ telefone INTEGER,
+ email varchar(150) UNIQUE NOT NULL
+);
+
+create table adocao(
+ id INTEGER PRIMARY KEY AUTO_INCREMENT,
+data_adoção datetime,
+FOREIGN KEY (id_abrigo) REFERENCES abrigo(id),
+FOREIGN KEY (id_animal) REFERENCES animal(id),
+FOREIGN KEY (id_adotante) REFERENCES adotante(id)
 )
+
