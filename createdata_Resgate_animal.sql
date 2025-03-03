@@ -69,3 +69,24 @@ CREATE TABLE Doacao (
     FOREIGN KEY (id_doador) REFERENCES Adotante(id_adotante),
     FOREIGN KEY (id_clinica) REFERENCES Clinica(id_clinica)
 );
+
+CREATE TABLE Quarentena (
+    id_quarentena INT PRIMARY KEY AUTO_INCREMENT,
+    id_animal INT NOT NULL,
+    id_veterinario INT NOT NULL,
+    id_clinica INT NOT NULL,
+    data_entrada DATETIME NOT NULL,
+    data_saida DATETIME,
+    FOREIGN KEY (id_animal) REFERENCES Animal(id),
+    FOREIGN KEY (id_veterinario) REFERENCES Veterinario(id),
+    FOREIGN KEY (id_clinica) REFERENCES Clinica(id)
+);
+
+CREATE TABLE Abrigo (
+    id_abrigo INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    endereco VARCHAR(255),
+    qntd_animais INT NOT NULL,
+    limite_animais INT NOT NULL
+);
