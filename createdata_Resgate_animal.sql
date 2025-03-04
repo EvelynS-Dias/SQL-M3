@@ -101,11 +101,34 @@ FOREIGN KEY (id_animal) REFERENCES animal(id_animal),
 FOREIGN KEY (id_padrinho) REFERENCES adotante(id_adotante)
 );
 
-
-
 create table doador( 
 id_adotante INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR (150),
 cpf CHAR (11) UNIQUE NOT NULL,
 rg CHAR (10) UNIQUE NOT NULL
+);
+
+CREATE TABLE clinica (
+id INT PRIMARY KEY
+    AUTO_INCREMENT,
+vacina_aplicada VARCHAR(150) NOT NULL,
+tratamento VARCHAR(150) NOT NULL,
+castracao BOOLEAN NOT NULL,
+id_veterinario INTEGER,
+FOREIGN KEY (id_veterinario)
+    REFERENCES veterinario (id),
+id_animal INTEGER,
+FOREIGN KEY(id_animal)
+    REFERENCES animal (id)
+);
+
+CREATE TABLE veterinario (
+id INT PRIMARY KEY
+    AUTO_INCREMENT,
+nome VARCHAR(150)  NOT NULL,
+crmv CHAR(15) UNIQUE NOT NULL,
+cpf CHAR(12) UNIQUE NOT NULL, 
+rg CHAR(9) UNIQUE NOT NULL,
+telefone INT NOT NULL,
+email VARCHAR(255)
 );
