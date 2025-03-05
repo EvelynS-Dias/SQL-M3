@@ -74,8 +74,4 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11
 (11385328538, 'Gato com leves ferimentos, após uma briga com outro gato de rua', NULL, 11),
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
-<<<<<<< HEAD
-(11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14)
-=======
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14);
->>>>>>> 93dfc64eaecd720fde0dcb6ac51b87319419cd18
