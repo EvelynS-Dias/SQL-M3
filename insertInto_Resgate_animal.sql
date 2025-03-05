@@ -75,3 +75,21 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14);
+
+INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
+
+('Carlos alberto santos', '12345678900', '451234567', '11987654321', 'carlos.alberto@email.com'),
+('Fernanda silva oliveira', '23456789012', '342345678', '21998765432', 'fernanda.silva@email.com'),
+('Juliano santos martins', '34567890123', '343456789', '31912345678', 'juliano.santos@email.com'),
+('Patrícia costa nogueira', '45678901234', '304567890', '41923456789', 'patricia.costa@email.com'),
+('Ricardo rocha sousa', '56789012345', '345678901', '51934567890', 'ricardo.rocha@email.com'),
+('Isabela pereira santana', '67890123456', '566789012', '61945678901', 'isabela.pereira@email.com');
+    
+INSERT INTO doador (nome, cpf, rg, email) VALUES
+('Lucas silva almeida', '12345678900', '56123456','lucas.almeida@email.com'),
+('Juliana pereira santos', '98765432100', '34123456','juliana.santos@email.com'),
+('Rafael costa martins', '22334455677','78334455', 'rafael.martins@email.com'),
+('Carla souza oliveira',  '33445566788', '67445567','carla.oliveira@email.com'),
+('Felipe rodrigues lima', '44556677899', '89415568', 'felipe.lima@email.com'),
+('Renata gomes da silva', '55667788900', '40667889', 'renata.silva@email.com');
+
