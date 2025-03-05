@@ -48,8 +48,24 @@ INSERT INTO clinica (id_veterinario, id_animal, vacina_aplicada, tratamento, cas
 (3, 22, 'Vacina Polivalente', 'Tratamento antipulgas', FALSE, 'Gato com infestação de pulgas, em tratamento'),
 (5, 24, 'Vacina Antirrábica', 'Cirurgia de remoção de tumor', TRUE, 'Cachorro passou por cirurgia para remoção de tumor benigno'),
 (4, 25, 'Vacina V8', 'Fisioterapia', FALSE, 'Cachorro com problema locomotor, encaminhado para fisioterapia'),
-(6, 21, 'Vacina Felina', 'Dieta especial', TRUE, 'Gato com sobrepeso, dieta e monitoramento recomendados'),
+(6, 21, 'Vacina Felina', 'Vacinação', TRUE, 'Gato com leves ferimentos, em tratamento'),
 (2, 19, 'Vacina Antirrábica', 'Tratamento ocular', FALSE, 'Gato com infecção ocular leve, em acompanhamento'),
 (1, 4, 'Vacina V10', 'Exame cardíaco', TRUE, 'Cachorro idoso, monitoramento cardíaco necessário'),
 (3, 23, 'Vacina Polivalente', 'Tratamento de micose', FALSE, 'Gato com sinais de micose, iniciou tratamento');
 
+
+INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11995670984, 'Cachorro foi encontrada em uma estrada por um motorista, com um ferimento na pata após um atropelamento', NULL, 1),
+(11949489324, 'Filhote da raça São Bernardo foi encontrado, porém está saúdavel', NULL, 2),
+(11394705478, 'Gato de rua encontrado com infecção na pele, sem ferimentos graves', NULL, 3),
+(11763467244, 'Cachorro resgatado e ira ser encaminhado para um check-up', NULL, 4),
+(11253258923, 'Gato encontrado em uma rodovia por ciclistas', NULL, 5),
+(11636325453, 'Cachorro foi encontrada em uma praia por banhistas', NULL, 6),
+(11457436344, 'Gato adulto encontrado por pedestres na rua, sem sinais aparentes de ferimentos e parece saudavel', NULL, 7),
+(11475328573, 'Cachorro foi encontrado em uma casa abandonada com sinais de anemia', NULL, 7),
+(11753643646, 'Gato encontrado com infestação de pulgas em um terreno baldio', NULL, 8),
+(11363469404, 'Cachorro encontrado com sintomas de cancêr', NULL, 9),
+(11359382523, 'Cachorro achado com dificuldade para se mover', NULL, 10),
+(11385328538, 'Gato com leves ferimentos, após uma briga com outro gato de rua', NULL, 11),
+(11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
+(11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
+(11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14)
