@@ -75,8 +75,6 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14);
-<<<<<<< HEAD
-=======
 
 
 INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
@@ -96,6 +94,40 @@ INSERT INTO doador (nome, cpf, rg, email) VALUES
 ('Felipe rodrigues lima', '44556677899', '89415568', 'felipe.lima@email.com'),
 ('Renata gomes da silva', '55667788900', '40667889', 'renata.silva@email.com');
 
+#10 registros
+INSERT INTO Adotante (nome, cpf, rg, endereco_completo, email, telefone) VALUES
+('Ana Clara Souza', '12345678901', '123456789012', 'Rua das Flores, 123 - São Paulo, SP', 'ana.souza@email.com', '11987654321'),
+('Bruno Oliveira', '23456789012', '234567890123', 'Avenida Paulista, 456 - São Paulo, SP', 'bruno.oliveira@email.com', '11987654322'),
+('Carla Mendes', '34567890123', '345678901234', 'Rua dos Pinheiros, 789 - São Paulo, SP', 'carla.mendes@email.com', '11987654323'),
+('Daniel Costa', '45678901234', '456789012345', 'Alameda Santos, 1011 - São Paulo, SP', 'daniel.costa@email.com', '11987654324'),
+('Eduarda Rocha', '56789012345', '567890123456', 'Rua Augusta, 1213 - São Paulo, SP', 'eduarda.rocha@email.com', '11987654325'),
+('Felipe Alves', '67890123456', '678901234567', 'Rua Oscar Freire, 1415 - São Paulo, SP', 'felipe.alves@email.com', '11987654326'),
+('Gabriela Lima', '78901234567', '789012345678', 'Rua Haddock Lobo, 1617 - São Paulo, SP', 'gabriela.lima@email.com', '11987654327'),
+('Henrique Silva', '89012345678', '890123456789', 'Rua da Consolação, 1819 - São Paulo, SP', 'henrique.silva@email.com', '11987654328'),
+('Isabela Santos', '90123456789', '901234567890', 'Rua Frei Caneca, 2021 - São Paulo, SP', 'isabela.santos@email.com', '11987654329'),
+('João Pereira', '01234567890', '012345678901', 'Rua Bela Cintra, 2223 - São Paulo, SP', 'joao.pereira@email.com', '11987654330');
 
+#10 registros
+INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
+(100.00, '2023-10-01', 1, 1),  -- Padrinho 1 apadrinhando o animal 1
+(150.50, '2023-10-02', 2, 2),  -- Padrinho 2 apadrinhando o animal 2
+(200.00, '2023-10-03', 3, 3),  -- Padrinho 3 apadrinhando o animal 3
+(75.25,  '2023-10-04', 4, 4),  -- Padrinho 4 apadrinhando o animal 4
+(300.00, '2023-10-05', 5, 5),  -- Padrinho 5 apadrinhando o animal 5
+(50.00,  '2023-10-06', 6, 6),  -- Padrinho 6 apadrinhando o animal 6
+(125.75, '2023-10-07', 7, 7),  -- Padrinho 7 apadrinhando o animal 7
+(250.00, '2023-10-08', 8, 8),  -- Padrinho 8 apadrinhando o animal 8
+(175.50, '2023-10-09', 9, 9);  -- Padrinho 9 apadrinhando o animal 9
 
->>>>>>> bd3b441fb2fb42cfd4377be5440fd8704e17c69a
+# 10 Registros
+INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
+(1, 1, 1, '2023-10-01 10:00:00'),  -- Adoção no abrigo 1, animal 1, adotante 1
+(1, 2, 2, '2023-10-02 11:30:00'),  -- Adoção no abrigo 1, animal 2, adotante 2
+(1, 3, 3, '2023-10-03 09:15:00'),  -- Adoção no abrigo 1, animal 3, adotante 3
+(1, 4, 4, '2023-10-04 14:45:00'),  -- Adoção no abrigo 1, animal 4, adotante 4
+(1, 5, 5, '2023-10-05 16:20:00'),  -- Adoção no abrigo 1, animal 5, adotante 5
+(1, 6, 6, '2023-10-06 12:00:00'),  -- Adoção no abrigo 1, animal 6, adotante 6
+(1, 7, 7, '2023-10-07 13:10:00'),  -- Adoção no abrigo 1, animal 7, adotante 7
+(1, 8, 8, '2023-10-08 15:30:00'),  -- Adoção no abrigo 1, animal 8, adotante 8
+(1, 9, 9, '2023-10-09 17:45:00'),  -- Adoção no abrigo 1, animal 9, adotante 9
+(1, 10, 10, '2023-10-10 18:00:00'); -- Adoção no abrigo 1, animal 10, adotante 10
