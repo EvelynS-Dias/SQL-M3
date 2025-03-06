@@ -75,9 +75,6 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14);
-<<<<<<< HEAD
-=======
-
 
 INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
 
@@ -96,6 +93,3 @@ INSERT INTO doador (nome, cpf, rg, email) VALUES
 ('Felipe rodrigues lima', '44556677899', '89415568', 'felipe.lima@email.com'),
 ('Renata gomes da silva', '55667788900', '40667889', 'renata.silva@email.com');
 
-
-
->>>>>>> bd3b441fb2fb42cfd4377be5440fd8704e17c69a
