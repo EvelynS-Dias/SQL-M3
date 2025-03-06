@@ -2,13 +2,15 @@ create database Resgate_Animal;
 
 use Resgate_Animal;
 
+drop  database resgate_animal;
+
 create table Animal(
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 porte ENUM("Baixo", "Médio", "Grande", "Gigante") NOT NULL,
 raça VARCHAR(150) NOT NULL,
 genero ENUM("macho", "fêmea") NOT NULL,
 espécie ENUM("gato", "cachorro") NOT NULL,
-RGA VARCHAR(15) NOT NULL,
+RGA VARCHAR(15),
 idade INTEGER,
 status_animal ENUM('saudavel', 'em analise', 'não aprovado', 'em tratamento') NOT NULL
 );
@@ -53,10 +55,10 @@ CREATE TABLE veterinario (
 id INT PRIMARY KEY
     AUTO_INCREMENT,
 nome VARCHAR(150)  NOT NULL,
-crmv CHAR(15) UNIQUE NOT NULL,
-cpf CHAR(12) UNIQUE NOT NULL, 
-rg CHAR(9) UNIQUE NOT NULL,
-telefone INT NOT NULL,
+crmv VARCHAR(15) UNIQUE NOT NULL,
+cpf VARCHAR(20) UNIQUE NOT NULL, 
+rg VARCHAR(9) UNIQUE NOT NULL,
+telefone VARCHAR(20) NOT NULL, -- ALTEREI PORQUE ELE CONSIDEROU O TELEFONE UM VALOR MUITO GRANDE PARA INTEIRO
 email VARCHAR(255)
 );
 
