@@ -137,3 +137,46 @@ INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
 (1, 9, 9, '2023-10-09 17:45:00'),  -- Adoção no abrigo 1, animal 9, adotante 9
 (1, 10, 10, '2023-10-10 18:00:00'); -- Adoção no abrigo 1, animal 10, adotante 10
 >>>>>>> 0d61975269df871b7e872b3d2b61f7fcd694e1e6
+
+-- Inserindo dados na tabela Doação
+-- Inserção de 10 registros
+INSERT INTO Doacao (id_doador, id_animal, tipo, descricao, data_doacao) VALUES
+(1, 2, 'Ração', 'Doação de 10 kg de ração para cães', '2025-03-06'),
+(2, 5, 'Medicamento', 'Doação de vermífugo para tratamento de filhotes', '2025-03-05'),
+(3, 8, 'Acessórios', 'Coleiras e brinquedos para animais do abrigo', '2025-03-04'),
+(4, 12, 'Ração', 'Saco de 15 kg de ração para gatos', '2025-03-03'),
+(5, 15, 'Dinheiro', 'Doação de R$ 500,00 para cuidados veterinários', '2025-03-02'),
+(6, 3, 'Ração', 'Pacote de 5 kg de ração para filhotes', '2025-03-01'),
+(7, 7, 'Medicamento', 'Remédios para tratamento de infecções', '2025-02-28'),
+(8, 10, 'Acessórios', 'Cobertores e caminhas para cães e gatos', '2025-02-27'),
+(9, 13, 'Ração', 'Ração úmida para gatos idosos', '2025-02-26'),
+(10, 18, 'Dinheiro', 'Doação de R$ 1000,00 para cirurgias emergenciais', '2025-02-25');
+
+-- Inserindo dados na tabela Quarentena
+-- Inserção de 10 registros
+INSERT INTO Quarentena (id_animal, data_entrada, motivo, status) VALUES
+(3, '2025-03-01', 'Doença de pele contagiosa', 'Em tratamento'),
+(6, '2025-02-28', 'Infecção respiratória', 'Em recuperação'),
+(9, '2025-02-27', 'Suspeita de cinomose', 'Sob observação'),
+(14, '2025-02-25', 'Resgate de maus-tratos', 'Em análise veterinária'),
+(17, '2025-02-22', 'Fratura na pata', 'Aguardando cirurgia'),
+(19, '2025-02-20', 'Desnutrição severa', 'Recebendo cuidados intensivos'),
+(21, '2025-02-18', 'Parvovirose confirmada', 'Em isolamento total'),
+(23, '2025-02-15', 'Suspeita de leptospirose', 'Realizando exames'),
+(25, '2025-02-12', 'Recuperação pós-cirúrgica', 'Acompanhamento diário'),
+(27, '2025-02-10', 'Ferimentos não cicatrizados', 'Aguardando alta médica');
+
+-- Inserindo dados na tabela Abrigo
+-- Inserção de 10 registros
+INSERT INTO Abrigo (id_animal, id_adotante, data_entrada, status) VALUES
+(1, NULL, '2025-02-20', 'Disponível para adoção'),
+(4, NULL, '2025-02-18', 'Em recuperação médica'),
+(7, NULL, '2025-02-15', 'Aguardando vacinação'),
+(11, NULL, '2025-02-10', 'Processo de socialização'),
+(16, 2, '2025-02-05', 'Adotado'),
+(20, NULL, '2025-02-02', 'Em adaptação ao ambiente do abrigo'),
+(22, NULL, '2025-01-30', 'Disponível para adoção'),
+(24, NULL, '2025-01-25', 'Tratamento para pulgas e carrapatos'),
+(26, NULL, '2025-01-22', 'Aguardando castração'),
+(28, 5, '2025-01-20', 'Adotado');
+
