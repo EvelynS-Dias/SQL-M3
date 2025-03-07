@@ -1,7 +1,7 @@
 use resgate_animal;
 
 -- Aqui tem 25 registros. 
-INSERT INTO animal (porte, raca, genero, especie, RGA, idade, status_animal) VALUES
+INSERT INTO animal (porte, raça, genero, espécie, RGA, idade, status_animal) VALUES
 ('Médio', 'Labrador', 'macho', 'cachorro', NULL, 3, 'saudavel'),
 ('Baixo', 'Poodle', 'fêmea', 'cachorro', NULL, 5, 'em tratamento'),
 ('Grande', 'Pastor Alemão', 'macho', 'cachorro', NULL, 4, 'saudavel'),
@@ -30,12 +30,13 @@ INSERT INTO animal (porte, raca, genero, especie, RGA, idade, status_animal) VAL
 
 -- 6 REGISTROS 
 INSERT INTO veterinario (nome, CRMV, cpf, RG, telefone, email) VALUES
-('Dr. João Silva', 'SP123456', '12345678901', '1234567894', 11987654321, 'joao.silva@gmail.com'),
-('Dra. Maria Oliveira', 'SP654321', '98765432109', '9876543219', 11987654321, 'maria.oliveira@email.com'),
-('Dr. Carlos Mendes', 'SP789456', '45678912345', '456789123', 11987654321, 'carlos.mendes@gmail.com'),
-('Dra. Ana Júlia', 'SP147258', '36985214736', '3698521479', 11987654321, 'ana.julia@gmail.com'),
-('Dr. Felipe Rocha', 'SP963852', '25874136925', '2587413692', 11987654321, 'felipe.rocha@outlook.com'),
-('Dr. Ricardo Alves', 'SP852963', '15935785296', '159357852', 11987654321, 'ricardo.alves@gmail.com');
+('Dr. João Silva', 'SP123456', '123.456.789-01', '12.345.678-9', 11987654321, 'joao.silva@gmail.com'),
+('Dra. Maria Oliveira', 'SP654321', '987.654.321-09', '98.765.432-1', 11987654321, 'maria.oliveira@email.com'),
+('Dr. Carlos Mendes', 'SP789456', '456.789.123-45', '45.678.912-3', 11987654321, 'carlos.mendes@gmail.com'),
+('Dra. Ana Júlia', 'SP147258', '369.852.147-36', '36.985.214-7', 11987654321, 'ana.julia@gmail.com'),
+('Dr. Felipe Rocha', 'SP963852', '258.741.369-25', '25.874.136-9', 11987654321, 'felipe.rocha@outlook.com'),
+('Dr. Ricardo Alves', 'SP852963', '159.357.852-96', '15.935.785-2', 11987654321, 'ricardo.alves@gmail.com');
+
 
 -- 15 REGISTROS 
 INSERT INTO clinica (id_veterinario, id_animal, vacina_aplicada, tratamento, castracao, descricao_caso) VALUES
@@ -75,82 +76,104 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES (11
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14);
-<<<<<<< HEAD
-=======
 
->>>>>>> 0d61975269df871b7e872b3d2b61f7fcd694e1e6
 
 INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
+('Carlos Alberto Santos', '123.456.789-00', '45.123.456-7', '11987654321', 'carlos.alberto@gmail.com'),
+('Fernanda Silva Oliveira', '234.567.890-12', '34.234.567-8', '21998765432', 'fernanda.silva@outlook.com'),
+('Juliano Santos Martins', '345.678.901-23', '34.345.678-9', '31912345678', 'juliano.santos@gmail.com'),
+('Patrícia Costa Nogueira', '456.789.012-34', '30.456.789-0', '41923456789', 'patricia.costa@gmail.com'),
+('Ricardo Rocha Sousa', '567.890.123-45', '34.567.890-1', '51934567890', 'ricardo.rocha@yahoo.com'),
+('Isabela Pereira Santana', '678.901.234-56', '56.678.901-2', '61945678901', 'isabela.pereira@gmail.com');
 
-('Carlos alberto santos', '12345678900', '451234567', '11987654321', 'carlos.alberto@email.com'),
-('Fernanda silva oliveira', '23456789012', '342345678', '21998765432', 'fernanda.silva@email.com'),
-('Juliano santos martins', '34567890123', '343456789', '31912345678', 'juliano.santos@email.com'),
-('Patrícia costa nogueira', '45678901234', '304567890', '41923456789', 'patricia.costa@email.com'),
-('Ricardo rocha sousa', '56789012345', '345678901', '51934567890', 'ricardo.rocha@email.com'),
-('Isabela pereira santana', '67890123456', '566789012', '61945678901', 'isabela.pereira@email.com');
-    
 INSERT INTO doador (nome, cpf, rg, email) VALUES
-('Lucas silva almeida', '12345678900', '56123456','lucas.almeida@email.com'),
-('Juliana pereira santos', '98765432100', '34123456','juliana.santos@email.com'),
-('Rafael costa martins', '22334455677','78334455', 'rafael.martins@email.com'),
-('Carla souza oliveira',  '33445566788', '67445567','carla.oliveira@email.com'),
-('Felipe rodrigues lima', '44556677899', '89415568', 'felipe.lima@email.com'),
-('Renata gomes da silva', '55667788900', '40667889', 'renata.silva@email.com');
+('Lucas Silva Almeida', '345.853.235-87', '56.123.456-5', 'lucas.almeida@gmail.com'),
+('Juliana Pereira Santos', '238.568.234-13', '34.123.456-3', 'juliana.santos@gmail.com'),
+('Rafael Costa Martins', '876.341.984-12', '78.334.455-5', 'rafael.martins@yahoo.com'),
+('Carla Souza Oliveira', '687.243.789-24', '67.445.567-6', 'carla.oliveira@gmail.com'),
+('Felipe Rodrigues Lima', '576.347.863-12', '89.415.568-8', 'felipe.lima@gmail.com'),
+('Renata Gomes da Silva', '587.237.347-23', '40.667.889-9', 'renata.silva@outlook.com'),
+('Gabriel Mendes Rocha', '975.354.686-12', '11.223.344-4', 'gabriel.rocha@gmail.com'),
+('Fernanda Alves Nunes', '679.678.349-19', '22.334.455-5', 'fernanda.nunes@gmail.com'),
+('Thiago Ferreira Lopes', '985.265.698-25', '33.445.566-6', 'thiago.lopes@gmail.com'),
+('Mariana Duarte Cardoso', '990.011.223-89', '44.556.677-7', 'mariana.cardoso@gmail.com'),
+('Bruno Henrique Sales', '111.222.334-01', '55.667.788-8', 'bruno.sales@outlook.com'),
+('Camila Barbosa Tavares', '222.333.445-23', '66.778.899-9', 'camila.tavares@gmail.com'),
+('Eduardo Santana Moreira', '333.444.556-45', '77.889.900-0', 'eduardo.moreira@gmail.com');
 
-<<<<<<< HEAD
-=======
-#10 registros
+#13 registros
 INSERT INTO Adotante (nome, cpf, rg, endereco_completo, email, telefone) VALUES
-('Ana Clara Souza', '12345678901', '123456789012', 'Rua das Flores, 123 - São Paulo, SP', 'ana.souza@email.com', '11987654321'),
-('Bruno Oliveira', '23456789012', '234567890123', 'Avenida Paulista, 456 - São Paulo, SP', 'bruno.oliveira@email.com', '11987654322'),
-('Carla Mendes', '34567890123', '345678901234', 'Rua dos Pinheiros, 789 - São Paulo, SP', 'carla.mendes@email.com', '11987654323'),
-('Daniel Costa', '45678901234', '456789012345', 'Alameda Santos, 1011 - São Paulo, SP', 'daniel.costa@email.com', '11987654324'),
-('Eduarda Rocha', '56789012345', '567890123456', 'Rua Augusta, 1213 - São Paulo, SP', 'eduarda.rocha@email.com', '11987654325'),
-('Felipe Alves', '67890123456', '678901234567', 'Rua Oscar Freire, 1415 - São Paulo, SP', 'felipe.alves@email.com', '11987654326'),
-('Gabriela Lima', '78901234567', '789012345678', 'Rua Haddock Lobo, 1617 - São Paulo, SP', 'gabriela.lima@email.com', '11987654327'),
-('Henrique Silva', '89012345678', '890123456789', 'Rua da Consolação, 1819 - São Paulo, SP', 'henrique.silva@email.com', '11987654328'),
-('Isabela Santos', '90123456789', '901234567890', 'Rua Frei Caneca, 2021 - São Paulo, SP', 'isabela.santos@email.com', '11987654329'),
-('João Pereira', '01234567890', '012345678901', 'Rua Bela Cintra, 2223 - São Paulo, SP', 'joao.pereira@email.com', '11987654330');
+('Ana Clara Souza', '123.456.789-01', '12.345.678.-9', 'Rua das Flores, 123 - São Paulo, SP', 'ana.souza@email.com', '11987654321'),
+('Bruno Oliveira', '234.567.890-12', '23.456.789.-0', 'Avenida Paulista, 456 - São Paulo, SP', 'bruno.oliveira@email.com', '11987654322'),
+('Carla Mendes', '345.678.901-23', '34.567.890.-1', 'Rua dos Pinheiros, 789 - São Paulo, SP', 'carla.mendes@email.com', '11987654323'),
+('Daniel Costa', '456.789.012-34', '45.678.901.-2', 'Alameda Santos, 1011 - São Paulo, SP', 'daniel.costa@email.com', '11987654324'),
+('Eduarda Rocha', '567.890.123-45', '56.789.012.-3', 'Rua Augusta, 1213 - São Paulo, SP', 'eduarda.rocha@email.com', '11987654325'),
+('Felipe Alves', '678.901.234-56', '67.890.123.-4', 'Rua Oscar Freire, 1415 - São Paulo, SP', 'felipe.alves@email.com', '11987654326'),
+('Gabriela Lima', '789.012.345-67', '78.901.234.-5', 'Rua Haddock Lobo, 1617 - São Paulo, SP', 'gabriela.lima@email.com', '11987654327'),
+('Henrique Silva', '890.123.456-78', '89.012.345.-6', 'Rua da Consolação, 1819 - São Paulo, SP', 'henrique.silva@email.com', '11987654328'),
+('Isabela Santos', '901.234.567-89', '90.123.456.-7', 'Rua Frei Caneca, 2021 - São Paulo, SP', 'isabela.santos@email.com', '11987654329'),
+('João Pereira', '012.345.678-90', '01.234.567.-8', 'Rua Bela Cintra, 2223 - São Paulo, SP', 'joao.pereira@email.com', '11987654330'),
+('Lucas Ferreira', '123.456.789-12', '12.345.678.-1', 'Rua Rio de Janeiro, 321 - São Paulo, SP', 'lucas.ferreira@email.com', '11987654331'),
+('Mariana Silva', '234.567.890-23', '23.456.789.-2', 'Avenida Brasil, 789 - São Paulo, SP', 'mariana.silva@email.com', '11987654332'),
+('Rafael Costa', '345.678.901-34', '34.567.890.-3', 'Rua dos Três Irmãos, 654 - São Paulo, SP', 'rafael.costa@email.com', '11987654333');
+
+select * from adotante;
+select * from adocao;
 
 #10 registros
 INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
-(100.00, '2023-10-01', 1, 1),  -- Padrinho 1 apadrinhando o animal 1
-(150.50, '2023-10-02', 2, 2),  -- Padrinho 2 apadrinhando o animal 2
-(200.00, '2023-10-03', 3, 3),  -- Padrinho 3 apadrinhando o animal 3
-(75.25,  '2023-10-04', 4, 4),  -- Padrinho 4 apadrinhando o animal 4
-(300.00, '2023-10-05', 5, 5),  -- Padrinho 5 apadrinhando o animal 5
-(50.00,  '2023-10-06', 6, 6),  -- Padrinho 6 apadrinhando o animal 6
-(125.75, '2023-10-07', 7, 7),  -- Padrinho 7 apadrinhando o animal 7
-(250.00, '2023-10-08', 8, 8),  -- Padrinho 8 apadrinhando o animal 8
-(175.50, '2023-10-09', 9, 9);  -- Padrinho 9 apadrinhando o animal 9
+(200.00, '2022-07-15', 23, 3),
+(100.00, '2022-08-20', 25, 1),
+(250.00, '2022-09-10', 15, 8),
+(175.50, '2022-10-05', 14, 9),
+(300.00, '2022-11-12', 19, 5),
+(75.25, '2022-12-01', 21, 4),
+(125.75, '2023-01-18', 16, 7),
+(150.50, '2023-03-02', 24, 2),
+(50.00, '2023-04-25', 17, 6);
 
-# 10 Registros
+# 13 Registros
 INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
-(1, 1, 1, '2023-10-01 10:00:00'),  -- Adoção no abrigo 1, animal 1, adotante 1
-(1, 2, 2, '2023-10-02 11:30:00'),  -- Adoção no abrigo 1, animal 2, adotante 2
-(1, 3, 3, '2023-10-03 09:15:00'),  -- Adoção no abrigo 1, animal 3, adotante 3
-(1, 4, 4, '2023-10-04 14:45:00'),  -- Adoção no abrigo 1, animal 4, adotante 4
-(1, 5, 5, '2023-10-05 16:20:00'),  -- Adoção no abrigo 1, animal 5, adotante 5
-(1, 6, 6, '2023-10-06 12:00:00'),  -- Adoção no abrigo 1, animal 6, adotante 6
-(1, 7, 7, '2023-10-07 13:10:00'),  -- Adoção no abrigo 1, animal 7, adotante 7
-(1, 8, 8, '2023-10-08 15:30:00'),  -- Adoção no abrigo 1, animal 8, adotante 8
-(1, 9, 9, '2023-10-09 17:45:00'),  -- Adoção no abrigo 1, animal 9, adotante 9
-(1, 10, 10, '2023-10-10 18:00:00'); -- Adoção no abrigo 1, animal 10, adotante 10
->>>>>>> 0d61975269df871b7e872b3d2b61f7fcd694e1e6
+(1, 1, 1, '2022-01-19 12:40:00'),
+(1, 2, 2, '2022-02-22 18:45:00'),
+(1, 9, 3, '2022-03-11 11:55:00'),
+(1, 4, 4, '2022-04-17 16:55:00'),
+(1, 14, 5, '2022-05-15 14:30:00'),
+(1, 6, 6, '2022-06-05 16:10:00'),
+(1, 20, 7, '2023-01-25 17:15:00'),
+(1, 17, 8, '2023-03-22 13:20:00'),
+(1, 27, 9, '2023-06-01 10:30:00'),
+(1, 22, 10, '2023-07-25 09:30:00'),
+(1, 30, 11, '2023-08-30 09:30:00'),
+(1, 33, 12, '2023-09-10 10:00:00'),
+(1, 32, 13, '2024-01-15 09:45:00');
+
+
 
 -- Inserindo dados na tabela Doação
 -- Inserção de 10 registros
-INSERT INTO Doacao (id_doador, id_animal, tipo, descricao, data_doacao) VALUES
-(1, 2, 'Ração', 'Doação de 10 kg de ração para cães', '2025-03-06'),
-(2, 5, 'Medicamento', 'Doação de vermífugo para tratamento de filhotes', '2025-03-05'),
-(3, 8, 'Acessórios', 'Coleiras e brinquedos para animais do abrigo', '2025-03-04'),
-(4, 12, 'Ração', 'Saco de 15 kg de ração para gatos', '2025-03-03'),
-(5, 15, 'Dinheiro', 'Doação de R$ 500,00 para cuidados veterinários', '2025-03-02'),
-(6, 3, 'Ração', 'Pacote de 5 kg de ração para filhotes', '2025-03-01'),
-(7, 7, 'Medicamento', 'Remédios para tratamento de infecções', '2025-02-28'),
-(8, 10, 'Acessórios', 'Cobertores e caminhas para cães e gatos', '2025-02-27'),
-(9, 13, 'Ração', 'Ração úmida para gatos idosos', '2025-02-26'),
-(10, 18, 'Dinheiro', 'Doação de R$ 1000,00 para cirurgias emergenciais', '2025-02-25');
+INSERT INTO Doacao (id_doador, id_clinica, tipo, descricao, data_doacao) VALUES
+(1, 1, 'Ração', 'Doação de 10 kg de ração para cães', '2025-03-06'),
+(2, 1, 'Medicamento', 'Doação de vermífugo para tratamento de filhotes', '2025-03-09'),
+(3, 1, 'Acessórios', 'Coleiras e brinquedos para animais do abrigo', '2025-03-15'),
+(4, 1, 'Ração', 'Saco de 15 kg de ração para gatos', '2025-03-27'),
+(2, 1, 'Dinheiro', 'Doação de de R$250, 00 para cuidados veterinários', '2025-03-30'),
+(5, 1, 'Dinheiro', 'Doação de R$ 500,00 para cuidados veterinários', '2025-04-01'),
+(4, 1, 'Dinheiro', 'Doação de R$ 300,00 para compra de medicamentos', '2025-05-02'),
+(6, 1, 'Ração', 'Pacote de 5 kg de ração para filhotes', '2025-04-06'),
+(7, 1, 'Medicamento', 'Remédios para tratamento de infecções', '2025-04-10'),
+(8, 1, 'Acessórios', 'Cobertores e caminhas para cães e gatos', '2025-04-12'),
+(2, 1, 'Medicamento', 'Vacinas para filhotes resgatados', '2025-05-10'),
+(9, 1, 'Ração', 'Ração úmida para gatos idosos', '2025-04-23'),
+(10, 1, 'Dinheiro', 'Doação de R$ 1000,00 para cirurgias emergenciais', '2025-04-29'),
+(6, 1, 'Ração', 'Saco de 20 kg de ração para cães', '2025-05-05'),
+(3, 1, 'Acessórios', 'Casinha e arranhador para gatos', '2025-05-15'),
+(5, 1, 'Ração', 'Ração especial para cães idosos', '2025-05-18'),
+(10, 1, 'Dinheiro', 'Doação de R$ 200,00 para castrações', '2025-05-20'),
+(11, 1, 'Ração', 'Doação de 10 kg de ração para gatos', '2025-05-22'),
+(12, 1, 'Medicamento', 'Antibióticos para tratamento de infecções', '2025-05-25'),
+(13, 1, 'Acessórios', 'Tapetes higiênicos para cães', '2025-05-28'),
+(3, 1, 'Dinheiro', 'Doação de R$ 1500,00 para exames veterinários', '2025-06-01');
 
 -- Inserindo dados na tabela Quarentena
 -- Inserção de 10 registros
@@ -168,7 +191,7 @@ INSERT INTO Quarentena (id_animal, data_entrada, motivo, status) VALUES
 
 -- Inserindo dados na tabela Abrigo
 -- Inserção de 10 registros
-INSERT INTO Abrigo (id_animal, id_adotante, data_entrada, status) VALUES
+INSERT INTO Abrigo (id_animal, data_entrada, status) VALUES
 (1, NULL, '2025-02-20', 'Disponível para adoção'),
 (4, NULL, '2025-02-18', 'Em recuperação médica'),
 (7, NULL, '2025-02-15', 'Aguardando vacinação'),
@@ -179,4 +202,10 @@ INSERT INTO Abrigo (id_animal, id_adotante, data_entrada, status) VALUES
 (24, NULL, '2025-01-25', 'Tratamento para pulgas e carrapatos'),
 (26, NULL, '2025-01-22', 'Aguardando castração'),
 (28, 5, '2025-01-20', 'Adotado');
+
+
+-- select animal.id_animal, animal.status_animal, abrigo.id_abrigo from animal
+-- inner join abrigo on abrigo.id_animal = animal.id_animal;
+
+
 
