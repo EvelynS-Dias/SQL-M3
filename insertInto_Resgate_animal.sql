@@ -1,3 +1,4 @@
+
 use resgate_animal;
 
 -- Aqui tem 25 registros. 
@@ -102,34 +103,34 @@ INSERT INTO doador (nome, cpf, rg, email) VALUES
 
 #13 registros
 INSERT INTO Adotante (nome, cpf, rg, endereco_completo, email, telefone) VALUES
-('Ana Clara Souza', '123.456.789-01', '12.345.678.-9', 'Rua das Flores, 123 - São Paulo, SP', 'ana.souza@email.com', '11987654321'),
-('Bruno Oliveira', '234.567.890-12', '23.456.789.-0', 'Avenida Paulista, 456 - São Paulo, SP', 'bruno.oliveira@email.com', '11987654322'),
-('Carla Mendes', '345.678.901-23', '34.567.890.-1', 'Rua dos Pinheiros, 789 - São Paulo, SP', 'carla.mendes@email.com', '11987654323'),
-('Daniel Costa', '456.789.012-34', '45.678.901.-2', 'Alameda Santos, 1011 - São Paulo, SP', 'daniel.costa@email.com', '11987654324'),
-('Eduarda Rocha', '567.890.123-45', '56.789.012.-3', 'Rua Augusta, 1213 - São Paulo, SP', 'eduarda.rocha@email.com', '11987654325'),
-('Felipe Alves', '678.901.234-56', '67.890.123.-4', 'Rua Oscar Freire, 1415 - São Paulo, SP', 'felipe.alves@email.com', '11987654326'),
-('Gabriela Lima', '789.012.345-67', '78.901.234.-5', 'Rua Haddock Lobo, 1617 - São Paulo, SP', 'gabriela.lima@email.com', '11987654327'),
-('Henrique Silva', '890.123.456-78', '89.012.345.-6', 'Rua da Consolação, 1819 - São Paulo, SP', 'henrique.silva@email.com', '11987654328'),
-('Isabela Santos', '901.234.567-89', '90.123.456.-7', 'Rua Frei Caneca, 2021 - São Paulo, SP', 'isabela.santos@email.com', '11987654329'),
-('João Pereira', '012.345.678-90', '01.234.567.-8', 'Rua Bela Cintra, 2223 - São Paulo, SP', 'joao.pereira@email.com', '11987654330'),
-('Lucas Ferreira', '123.456.789-12', '12.345.678.-1', 'Rua Rio de Janeiro, 321 - São Paulo, SP', 'lucas.ferreira@email.com', '11987654331'),
-('Mariana Silva', '234.567.890-23', '23.456.789.-2', 'Avenida Brasil, 789 - São Paulo, SP', 'mariana.silva@email.com', '11987654332'),
-('Rafael Costa', '345.678.901-34', '34.567.890.-3', 'Rua dos Três Irmãos, 654 - São Paulo, SP', 'rafael.costa@email.com', '11987654333');
+('Ana Clara Souza', '123.456.789-01', '12.345.678-9', 'Rua das Flores, 123 - São Paulo, SP', 'ana.souza@email.com', '11987654321'),
+('Bruno Oliveira', '234.567.890-12', '23.456.789-0', 'Avenida Paulista, 456 - São Paulo, SP', 'bruno.oliveira@email.com', '11987654322'),
+('Carla Mendes', '345.678.901-23', '34.567.890-1', 'Rua dos Pinheiros, 789 - São Paulo, SP', 'carla.mendes@email.com', '11987654323'),
+('Daniel Costa', '456.789.012-34', '45.678.901-2', 'Alameda Santos, 1011 - São Paulo, SP', 'daniel.costa@email.com', '11987654324'),
+('Eduarda Rocha', '567.890.123-45', '56.789.012-3', 'Rua Augusta, 1213 - São Paulo, SP', 'eduarda.rocha@email.com', '11987654325'),
+('Felipe Alves', '678.901.234-56', '67.890.123-4', 'Rua Oscar Freire, 1415 - São Paulo, SP', 'felipe.alves@email.com', '11987654326'),
+('Gabriela Lima', '789.012.345-67', '78.901.234-5', 'Rua Haddock Lobo, 1617 - São Paulo, SP', 'gabriela.lima@email.com', '11987654327'),
+('Henrique Silva', '890.123.456-78', '89.012.345-6', 'Rua da Consolação, 1819 - São Paulo, SP', 'henrique.silva@email.com', '11987654328'),
+('Isabela Santos', '901.234.567-89', '90.123.456-7', 'Rua Frei Caneca, 2021 - São Paulo, SP', 'isabela.santos@email.com', '11987654329'),
+('João Pereira', '012.345.678-90', '01.234.567-8', 'Rua Bela Cintra, 2223 - São Paulo, SP', 'joao.pereira@email.com', '11987654330'),
+('Lucas Ferreira', '123.456.789-12', '12.345.678-1', 'Rua Rio de Janeiro, 321 - São Paulo, SP', 'lucas.ferreira@email.com', '11987654331'),
+('Mariana Silva', '234.567.890-23', '23.456.789-2', 'Avenida Brasil, 789 - São Paulo, SP', 'mariana.silva@email.com', '11987654332'),
+('Rafael Costa', '345.678.901-34', '34.567.890-3', 'Rua dos Três Irmãos, 654 - São Paulo, SP', 'rafael.costa@email.com', '11987654333');
 
 select * from adotante;
 select * from adocao;
 
 #10 registros
 INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
-(200.00, '2022-07-15', 23, 3),
-(100.00, '2022-08-20', 25, 1),
-(250.00, '2022-09-10', 15, 8),
-(175.50, '2022-10-05', 14, 9),
-(300.00, '2022-11-12', 19, 5),
+(200.00, '2022-07-15', 23, 1),
+(100.00, '2022-08-20', 25, 2),
+(250.00, '2022-09-10', 15, 3),
+(175.50, '2022-10-05', 14, 4),
+(300.00, '2022-11-12', 19, 2),
 (75.25, '2022-12-01', 21, 4),
-(125.75, '2023-01-18', 16, 7),
-(150.50, '2023-03-02', 24, 2),
-(50.00, '2023-04-25', 17, 6);
+(125.75, '2023-01-18', 16, 2),
+(150.50, '2023-03-02', 24, 1),
+(50.00, '2023-04-25', 17, 2);
 
 # 13 Registros
 INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
@@ -151,42 +152,33 @@ INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
 
 -- Inserindo dados na tabela Doação
 -- Inserção de 10 registros
-INSERT INTO Doacao (id_doador, id_clinica, tipo, descricao, data_doacao) VALUES
-(1, 1, 'Ração', 'Doação de 10 kg de ração para cães', '2025-03-06'),
-(2, 1, 'Medicamento', 'Doação de vermífugo para tratamento de filhotes', '2025-03-09'),
-(3, 1, 'Acessórios', 'Coleiras e brinquedos para animais do abrigo', '2025-03-15'),
-(4, 1, 'Ração', 'Saco de 15 kg de ração para gatos', '2025-03-27'),
-(2, 1, 'Dinheiro', 'Doação de de R$250, 00 para cuidados veterinários', '2025-03-30'),
-(5, 1, 'Dinheiro', 'Doação de R$ 500,00 para cuidados veterinários', '2025-04-01'),
-(4, 1, 'Dinheiro', 'Doação de R$ 300,00 para compra de medicamentos', '2025-05-02'),
-(6, 1, 'Ração', 'Pacote de 5 kg de ração para filhotes', '2025-04-06'),
-(7, 1, 'Medicamento', 'Remédios para tratamento de infecções', '2025-04-10'),
-(8, 1, 'Acessórios', 'Cobertores e caminhas para cães e gatos', '2025-04-12'),
-(2, 1, 'Medicamento', 'Vacinas para filhotes resgatados', '2025-05-10'),
-(9, 1, 'Ração', 'Ração úmida para gatos idosos', '2025-04-23'),
-(10, 1, 'Dinheiro', 'Doação de R$ 1000,00 para cirurgias emergenciais', '2025-04-29'),
-(6, 1, 'Ração', 'Saco de 20 kg de ração para cães', '2025-05-05'),
-(3, 1, 'Acessórios', 'Casinha e arranhador para gatos', '2025-05-15'),
-(5, 1, 'Ração', 'Ração especial para cães idosos', '2025-05-18'),
-(10, 1, 'Dinheiro', 'Doação de R$ 200,00 para castrações', '2025-05-20'),
-(11, 1, 'Ração', 'Doação de 10 kg de ração para gatos', '2025-05-22'),
-(12, 1, 'Medicamento', 'Antibióticos para tratamento de infecções', '2025-05-25'),
-(13, 1, 'Acessórios', 'Tapetes higiênicos para cães', '2025-05-28'),
-(3, 1, 'Dinheiro', 'Doação de R$ 1500,00 para exames veterinários', '2025-06-01');
+INSERT INTO Doacao (id_doador, id_clinica, valor, tipo_doacao, data_doacao) VALUES
+(1, 2, 500.00, 'dinheiro', '2025-03-04'),
+(2, 3, 0.00, 'alimentos', '2025-03-05'),
+(3, 1, 0.00, 'cobertores', '2025-03-24'),
+(4, 4, 250.00, 'dinheiro', '2025-03-21'),
+(5, 2, 0.00, 'medicamentos', '2025-03-26'),
+(6, 5, 100.00, 'dinheiro', '2025-03-08'),
+(7, 3, 0.00, 'outros', '2025-03-01'),
+(8, 1, 50.00, 'dinheiro', '2025-03-11'),
+(9, 4, 0.00, 'alimentos', '2025-03-16'),
+(10, 5, 0.00, 'medicamentos', '2025-03-29');
+
 
 -- Inserindo dados na tabela Quarentena
 -- Inserção de 10 registros
-INSERT INTO Quarentena (id_animal, data_entrada, motivo, status) VALUES
-(3, '2025-03-01', 'Doença de pele contagiosa', 'Em tratamento'),
-(6, '2025-02-28', 'Infecção respiratória', 'Em recuperação'),
-(9, '2025-02-27', 'Suspeita de cinomose', 'Sob observação'),
-(14, '2025-02-25', 'Resgate de maus-tratos', 'Em análise veterinária'),
-(17, '2025-02-22', 'Fratura na pata', 'Aguardando cirurgia'),
-(19, '2025-02-20', 'Desnutrição severa', 'Recebendo cuidados intensivos'),
-(21, '2025-02-18', 'Parvovirose confirmada', 'Em isolamento total'),
-(23, '2025-02-15', 'Suspeita de leptospirose', 'Realizando exames'),
-(25, '2025-02-12', 'Recuperação pós-cirúrgica', 'Acompanhamento diário'),
-(27, '2025-02-10', 'Ferimentos não cicatrizados', 'Aguardando alta médica');
+INSERT INTO Quarentena (id_animal, id_veterinario, id_clinica, data_entrada, data_saida) VALUES  
+(3, 3, 3, '2025-03-01 13:43', '2025-03-01 16:43'),  
+(6, 6, 6, '2025-02-28 12:00', '2025-02-28 15:21'),  
+(9, 3, 9, '2025-02-27 10:30', '2025-02-27 13:30'),  
+(14, 1, 14, '2025-02-25 09:15', '2025-02-25 12:15'),  
+(16, 1, 16, '2025-02-22 08:45', '2025-02-22 11:45'),  
+(15, 3, 15, '2025-02-20 14:20', '2025-02-20 17:20'),  
+(13, 2, 13, '2025-02-18 16:00', '2025-02-18 19:00'),  
+(12, 6, 12, '2025-02-15 11:10', '2025-02-15 14:10'),  
+(8, 1, 8, '2025-02-12 07:30', '2025-02-12 10:30'),  
+(7, 2, 7, '2025-02-10 15:45', '2025-02-10 18:45');
+
 
 -- Inserindo dados na tabela Abrigo
 -- Inserção de 10 registros

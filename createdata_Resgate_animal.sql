@@ -1,8 +1,5 @@
-create database Resgate_Animal;
 
 use Resgate_Animal;
-
-drop  database resgate_animal;
 
 create table Animal(
 id_animal INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -106,7 +103,7 @@ CREATE TABLE Doacao (
     id_clinica INT NOT NULL,
     valor DECIMAL(10, 2) CHECK (valor >= 0),
     tipo_doacao ENUM('dinheiro', 'alimentos', 'cobertores', 'medicamentos', 'outros') NOT NULL,
-    extrato_bancario TEXT,
+    data_doacao DATE,
     FOREIGN KEY (id_doador) REFERENCES doador(id_doador),
     FOREIGN KEY (id_clinica) REFERENCES Clinica(id_clinica)
 );
@@ -132,6 +129,7 @@ id_padrinho INT,
 FOREIGN KEY (id_animal) REFERENCES animal(id_animal),
 FOREIGN KEY (id_padrinho) REFERENCES padrinho(id_padrinho)
 );
+
 
 create table adocao(
  id_adocao INTEGER PRIMARY KEY AUTO_INCREMENT,
