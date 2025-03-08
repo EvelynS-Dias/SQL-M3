@@ -2,7 +2,7 @@ create database Resgate_Animal;
 
 use Resgate_Animal;
 
-drop  database resgate_animal;
+drop database resgate_animal;
 
 create table Animal(
 id_animal INTEGER PRIMARY KEY AUTO_INCREMENT, 
@@ -29,7 +29,8 @@ CREATE TABLE denuncia_animal (
         
 	id_animal INTEGER,
 	FOREIGN KEY (id_animal)
-		REFERENCES animal(id_animal)
+	REFERENCES animal(id_animal),
+	status enum("Em andamento", "Resolvido", "Fechado")
 );
 
 create table padrinho(
@@ -61,8 +62,8 @@ telefone VARCHAR(20) NOT NULL, -- ALTEREI PORQUE ELE CONSIDEROU O TELEFONE UM VA
 email VARCHAR(255)
 );
 
-CREATE TABLE Consultas(
-id_tratamento_veterinario INT PRIMARY KEY
+CREATE TABLE Consulta(
+id_consulta INT PRIMARY KEY
     AUTO_INCREMENT,
 vacina_aplicada VARCHAR(150),
 tratamento VARCHAR(150) NOT NULL,
@@ -89,25 +90,22 @@ CREATE TABLE Adotante (
 CREATE TABLE Doacao (
     id_doacao INT AUTO_INCREMENT PRIMARY KEY,
     id_doador INT NOT NULL,
-    id_clinica INT NOT NULL,
     valor DECIMAL(10, 2) CHECK (valor >= 0),
     tipo_doacao ENUM('dinheiro', 'alimentos', 'cobertores', 'medicamentos', 'outros') NOT NULL,
-    extrato_bancario TEXT,
     data_doação DATE,
-    FOREIGN KEY (id_doador) REFERENCES doador(id_doador),
-    FOREIGN KEY (id_clinica) REFERENCES Clinica(id_clinica)
+    FOREIGN KEY (id_doador) REFERENCES doador(id_doador)
 );
 
 CREATE TABLE Quarentena (
     id_quarentena INT PRIMARY KEY AUTO_INCREMENT,
     id_animal INT NOT NULL,
     id_veterinario INT NOT NULL,
-    id_clinica INT NOT NULL,
+    id_consulta INT NOT NULL,
     data_entrada DATETIME NOT NULL,
     data_saida DATETIME,
     FOREIGN KEY (id_animal) REFERENCES Animal(id_animal),
     FOREIGN KEY (id_veterinario) REFERENCES Veterinario(id_veterinario),
-    FOREIGN KEY (id_clinica) REFERENCES Clinica(id_clinica)
+    FOREIGN KEY (id_consulta) REFERENCES consulta(id_consulta)
 );
 
 create table apadrinhamento(
@@ -122,11 +120,9 @@ FOREIGN KEY (id_padrinho) REFERENCES padrinho(id_padrinho)
 
 create table adocao(
  id_adocao INTEGER PRIMARY KEY AUTO_INCREMENT,
- id_abrigo INTEGER,
  id_animal INTEGER,
  id_adotante INTEGER,
 data_adoção datetime,
-FOREIGN KEY (id_abrigo) REFERENCES Abrigo(id_abrigo),
 FOREIGN KEY (id_animal) REFERENCES animal(id_animal),
 FOREIGN KEY (id_adotante) REFERENCES adotante(id_adotante)
 );
