@@ -97,7 +97,18 @@ INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
 ('Juliano Santos Martins', '345.678.901-23', '34.345.678-9', '31912345678', 'juliano.santos@gmail.com'),
 ('Patrícia Costa Nogueira', '456.789.012-34', '30.456.789-0', '41923456789', 'patricia.costa@gmail.com'),
 ('Ricardo Rocha Sousa', '567.890.123-45', '34.567.890-1', '51934567890', 'ricardo.rocha@yahoo.com'),
-('Isabela Pereira Santana', '678.901.234-56', '56.678.901-2', '61945678901', 'isabela.pereira@gmail.com');
+('Isabela Pereira Santana', '678.901.234-56', '56.678.901-2', '61945678901', 'isabela.pereira@gmail.com'),
+('Antonio Ferreira Silva', '660.804.254-76', '50.668.951-6', '71939679461', 'antonio.ferreira@gmail.com'),
+('Silvana Fontes Barbosa', '988.500.204-00', '50.645.855-1', '75929659481', 'silvana.barbosa@gmail.com'),
+('Henrique Felix Pinheiro de Oliveira', '560.214.224-86', '43.878.041-5', '61849150421', 'henrique.oliveira@outlook.com'),
+('Alana Vidal Carneiro', '950.670.674-60', '60.745.355-3', '75929659471', 'alana.vidal@gmail.com'),
+('Marcos Ribeiro de Jesus', '800.560.454-10', '60.895.235-4', '75827559451', 'marcos.ribeiro@gmail.com'),
+('Daniela Cardoso Magalhaes', '670.566.324-30', '80.789.125-7', '11965549351', 'daniela.cardoso@gmail.com'),
+('Luiza Teixeira Vieira', '930.780.404-20', '90.735.345-6', '81919659451', 'luiza.teixeira@outlook.com');
+
+
+
+
 
 INSERT INTO doador (nome, cpf, rg, email) VALUES
 ('Lucas Silva Almeida', '345.853.235-87', '56.123.456-5', 'lucas.almeida@gmail.com'),
