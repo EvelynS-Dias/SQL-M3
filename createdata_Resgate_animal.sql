@@ -1,15 +1,16 @@
+create database Resgate_Animal;
 
 use Resgate_Animal;
 
+drop  database resgate_animal;
+
 create table Animal(
-id_animal INTEGER PRIMARY KEY AUTO_INCREMENT,
-porte ENUM("Baixo", "Médio", "Grande", "Gigante") NOT NULL,
+id_animal INTEGER PRIMARY KEY AUTO_INCREMENT, 
 raça VARCHAR(150) NOT NULL,
 genero ENUM("macho", "fêmea") NOT NULL,
 espécie ENUM("gato", "cachorro") NOT NULL,
-RGA VARCHAR(15),
 idade INTEGER,
-status_animal ENUM('saudavel', 'em analise', 'não aprovado', 'em tratamento') NOT NULL
+status_animal ENUM('em quarentena', 'no abrigo', 'em analise', 'em tratamento', 'adotado') NOT NULL
 );
 
 CREATE TABLE denuncia (
@@ -60,8 +61,8 @@ telefone VARCHAR(20) NOT NULL, -- ALTEREI PORQUE ELE CONSIDEROU O TELEFONE UM VA
 email VARCHAR(255)
 );
 
-CREATE TABLE clinica (
-id_clinica INT PRIMARY KEY
+CREATE TABLE Consultas(
+id_tratamento_veterinario INT PRIMARY KEY
     AUTO_INCREMENT,
 vacina_aplicada VARCHAR(150),
 tratamento VARCHAR(150) NOT NULL,
@@ -74,18 +75,6 @@ id_animal INTEGER,
 FOREIGN KEY(id_animal)
     REFERENCES animal(id_animal)
 );
-
-CREATE TABLE Abrigo (
-    id_abrigo INT PRIMARY KEY AUTO_INCREMENT,
-    id_animal int,
-    nome VARCHAR(100) NOT NULL,
-    telefone VARCHAR(20),
-    endereco VARCHAR(255),
-    qntd_animais INT NOT NULL,
-    limite_animais INT NOT NULL,
-    FOREIGN KEY(id_animal)
-    REFERENCES animal(id_animal)
-); 
 
 CREATE TABLE Adotante (
     id_adotante INT AUTO_INCREMENT PRIMARY KEY,
@@ -103,7 +92,8 @@ CREATE TABLE Doacao (
     id_clinica INT NOT NULL,
     valor DECIMAL(10, 2) CHECK (valor >= 0),
     tipo_doacao ENUM('dinheiro', 'alimentos', 'cobertores', 'medicamentos', 'outros') NOT NULL,
-    data_doacao DATE,
+    extrato_bancario TEXT,
+    data_doação DATE,
     FOREIGN KEY (id_doador) REFERENCES doador(id_doador),
     FOREIGN KEY (id_clinica) REFERENCES Clinica(id_clinica)
 );
@@ -121,7 +111,7 @@ CREATE TABLE Quarentena (
 );
 
 create table apadrinhamento(
-idapadrinhamento INT AUTO_INCREMENT PRIMARY KEY,
+id_apadrinhamento INT AUTO_INCREMENT PRIMARY KEY,
 valor decimal(10,2) CHECK (valor >=0),
 data_ DATE,
 id_animal INT,
@@ -129,7 +119,6 @@ id_padrinho INT,
 FOREIGN KEY (id_animal) REFERENCES animal(id_animal),
 FOREIGN KEY (id_padrinho) REFERENCES padrinho(id_padrinho)
 );
-
 
 create table adocao(
  id_adocao INTEGER PRIMARY KEY AUTO_INCREMENT,

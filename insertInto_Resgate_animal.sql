@@ -1,33 +1,48 @@
 
 use resgate_animal;
 
+INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
+(1, 1, 'Resolvido'),
+(1, 2, 'Resolvido'),
+(1, 3, 'Resolvido'),
+(1, 4, 'Resolvido'),
+(1, 5, 'Resolvido'),
+(1, 6, 'Em andamento'),
+(2, 7, 'Em andamento'),
+(2, 8, 'Em andamento'),
+(2, 9, 'Em andamento'),
+(2, 10, 'Em andamento'),
+(2, 11, 'Em andamento'),
+(2, 12, 'Resolvido'),
+(3, 13, 'Em andamento'),
+(3, 14, 'Em andamento'),
+(3, 15, 'Em andamento'),
+(3, 16, 'Em andamento'),
+(3, 17, 'Em andamento'),
+(3, 18, 'Resolvido');
+
+
 -- Aqui tem 25 registros. 
-INSERT INTO animal (porte, raça, genero, espécie, RGA, idade, status_animal) VALUES
-('Médio', 'Labrador', 'macho', 'cachorro', NULL, 3, 'saudavel'),
-('Baixo', 'Poodle', 'fêmea', 'cachorro', NULL, 5, 'em tratamento'),
-('Grande', 'Pastor Alemão', 'macho', 'cachorro', NULL, 4, 'saudavel'),
-('Médio', 'SRD', 'fêmea', 'cachorro', NULL, 2, 'em analise'),
-('Gigante', 'São Bernardo', 'macho', 'cachorro', NULL, 6, 'não aprovado'),
-('Médio', 'Schnauzer', 'macho', 'cachorro', NULL, 3, 'saudavel'),
-('Baixo', 'Buldogue Francês', 'fêmea', 'cachorro', NULL, 2, 'em analise'),
-('Grande', 'Golden Retriever', 'macho', 'cachorro', NULL, 5, 'saudavel'),
-('Baixo', 'Shih Tzu', 'fêmea', 'cachorro', NULL, 4, 'em tratamento'),
-('Gigante', 'SRD', 'macho', 'cachorro', NULL, 7, 'não aprovado'),
-('Baixo', 'Persa', 'fêmea', 'gato', NULL, 3, 'saudavel'),
-('Médio', 'Siamês', 'macho', 'gato', NULL, 4, 'em tratamento'),
-('Médio', 'Maine Coon', 'fêmea', 'gato', NULL, 5, 'saudavel'),
-('Baixo', 'SRD', 'macho', 'gato', NULL, 2, 'em analise'),
-('Baixo', 'Bengal', 'fêmea', 'gato', NULL, 3, 'não aprovado'),
-('Médio', 'Angorá', 'macho', 'gato', NULL, 4, 'saudavel'),
-('Baixo', 'Himalaio', 'fêmea', 'gato', NULL, 2, 'em tratamento'),
-('Médio', 'Ragdoll', 'macho', 'gato', NULL, 3, 'saudavel'),
-('Baixo', 'Sphynx', 'fêmea', 'gato', NULL, 5, 'em analise'),
-('Médio', 'Chartreux', 'macho', 'gato', NULL, 4, 'não aprovado'),
-('Grande', 'Akita', 'macho', 'cachorro', NULL, 6, 'saudavel'),
-('Médio', 'Dachshund', 'fêmea', 'cachorro', NULL, 4, 'em tratamento'),
-('Baixo', 'Yorkshire', 'macho', 'cachorro', NULL, 3, 'saudavel'),
-('Gigante', 'Mastiff', 'fêmea', 'cachorro', NULL, 7, 'não aprovado'),
-('Médio', 'Border Collie', 'macho', 'cachorro', NULL, 5, 'em analise');
+INSERT INTO Animal (raça, genero, espécie, idade, status_animal, localização) VALUES
+('Border Collie', 'macho', 'cachorro', 3, 'adotado'),
+('Beagle', 'fêmea', 'cachorro', 5, 'adotado'),
+('Rottweiler', 'macho', 'cachorro', 4, 'adotado'),
+('Siberian Husky', 'macho', 'cachorro', 2, 'adotado'),
+('Scottish Fold', 'fêmea', 'gato', 3, 'adotado'),
+('Labrador', 'macho', 'cachorro', 3, 'no abrigo'),
+('Poodle', 'fêmea', 'cachorro', 5, 'em tratamento'),
+('Pastor Alemão', 'macho', 'cachorro', 4, 'no abrigo'),
+('SRD', 'fêmea', 'cachorro', 2, 'em analise'),
+('São Bernardo', 'macho', 'cachorro', 6, 'em quarentena'),
+('Schnauzer', 'macho', 'cachorro', 3, 'no abrigo'),
+('Buldogue Francês', 'fêmea', 'cachorro', 2, 'adotado'),
+('Golden Retriever', 'macho', 'cachorro', 5, 'no abrigo'),
+('Shih Tzu', 'fêmea', 'cachorro', 4, 'em tratamento'),
+('SRD', 'macho', 'cachorro', 7, 'em quarentena'),
+('Persa', 'fêmea', 'gato', 3, 'no abrigo'),
+('Siamês', 'macho', 'gato', 4, 'em tratamento'),
+('Maine Coon', 'fêmea', 'gato', 5, 'adotado');
+
 
 -- 6 REGISTROS 
 INSERT INTO veterinario (nome, CRMV, cpf, RG, telefone, email) VALUES
@@ -117,86 +132,46 @@ INSERT INTO Adotante (nome, cpf, rg, endereco_completo, email, telefone) VALUES
 ('Mariana Silva', '234.567.890-23', '23.456.789-2', 'Avenida Brasil, 789 - São Paulo, SP', 'mariana.silva@email.com', '11987654332'),
 ('Rafael Costa', '345.678.901-34', '34.567.890-3', 'Rua dos Três Irmãos, 654 - São Paulo, SP', 'rafael.costa@email.com', '11987654333');
 
-select * from adotante;
-select * from adocao;
-
 #10 registros
 INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
-(200.00, '2022-07-15', 23, 1),
-(100.00, '2022-08-20', 25, 2),
-(250.00, '2022-09-10', 15, 3),
-(175.50, '2022-10-05', 14, 4),
-(300.00, '2022-11-12', 19, 2),
-(75.25, '2022-12-01', 21, 4),
-(125.75, '2023-01-18', 16, 2),
-(150.50, '2023-03-02', 24, 1),
-(50.00, '2023-04-25', 17, 2);
+(200.00, '2025-07-15', 6, 1),
+(100.00, '2025-08-20', 8, 2),
+(250.00, '2025-09-10', 11, 3),
+(175.50, '2025-10-05', 14, 4),
+(300.00, '2025-11-12', 17, 5),
+(75.25, '2025-12-01', 16, 6);
 
 # 13 Registros
-INSERT INTO adocao (id_abrigo, id_animal, id_adotante, data_adoção) VALUES
-(1, 1, 1, '2022-01-19 12:40:00'),
-(1, 2, 2, '2022-02-22 18:45:00'),
-(1, 9, 3, '2022-03-11 11:55:00'),
-(1, 4, 4, '2022-04-17 16:55:00'),
-(1, 14, 5, '2022-05-15 14:30:00'),
-(1, 6, 6, '2022-06-05 16:10:00'),
-(1, 20, 7, '2023-01-25 17:15:00'),
-(1, 17, 8, '2023-03-22 13:20:00'),
-(1, 27, 9, '2023-06-01 10:30:00'),
-(1, 22, 10, '2023-07-25 09:30:00'),
-(1, 30, 11, '2023-08-30 09:30:00'),
-(1, 33, 12, '2023-09-10 10:00:00'),
-(1, 32, 13, '2024-01-15 09:45:00');
-
-
+INSERT INTO adocao (id_animal, id_adotante, data_adoção) VALUES
+(1, 1, '2024-05-19 12:40:00'),
+(2, 2, '2024-06-22 18:45:00'),
+(3, 3, '2024-07-11 11:55:00'),
+(4, 4, '2024-08-17 16:55:00'),
+(5, 5, '2024-09-15 14:30:00'),
+(11, 6, '2024-10-05 16:10:00'),
+(17, 7, '2025-01-15 09:30:00');
 
 -- Inserindo dados na tabela Doação
 -- Inserção de 10 registros
-INSERT INTO Doacao (id_doador, id_clinica, valor, tipo_doacao, data_doacao) VALUES
-(1, 2, 500.00, 'dinheiro', '2025-03-04'),
-(2, 3, 0.00, 'alimentos', '2025-03-05'),
-(3, 1, 0.00, 'cobertores', '2025-03-24'),
-(4, 4, 250.00, 'dinheiro', '2025-03-21'),
-(5, 2, 0.00, 'medicamentos', '2025-03-26'),
-(6, 5, 100.00, 'dinheiro', '2025-03-08'),
-(7, 3, 0.00, 'outros', '2025-03-01'),
-(8, 1, 50.00, 'dinheiro', '2025-03-11'),
-(9, 4, 0.00, 'alimentos', '2025-03-16'),
-(10, 5, 0.00, 'medicamentos', '2025-03-29');
+INSERT INTO Doacao (id_doador, valor, tipo_doacao, data_doacao) VALUES
+(15, 0.00, 'outros', '2024-08-30'),
+(14, 100.00, 'cobertores', '2024-09-05'),
+(13, 50.00, 'medicamentos', '2024-10-10'),
+(12, 0.00, 'alimentos', '2024-11-15'),
+(11, 200.00, 'dinheiro', '2024-12-20'),
+(1, 500.00, 'dinheiro', '2025-03-04'),
+(7, 0.00, 'outros', '2025-03-01'),
+(2, 0.00, 'alimentos', '2025-03-05'),
+(6, 100.00, 'dinheiro', '2025-03-08'),
+(8, 50.00, 'dinheiro', '2025-03-11'),
+(9, 0.00, 'alimentos', '2025-03-16'),
+(4, 250.00, 'dinheiro', '2025-03-21'),
+(3, 0.00, 'cobertores', '2025-03-24'),
+(5, 0.00, 'medicamentos', '2025-03-26'),
+(10, 0.00, 'medicamentos', '2025-03-29');
 
-
--- Inserindo dados na tabela Quarentena
--- Inserção de 10 registros
-INSERT INTO Quarentena (id_animal, id_veterinario, id_clinica, data_entrada, data_saida) VALUES  
-(3, 3, 3, '2025-03-01 13:43', '2025-03-01 16:43'),  
-(6, 6, 6, '2025-02-28 12:00', '2025-02-28 15:21'),  
-(9, 3, 9, '2025-02-27 10:30', '2025-02-27 13:30'),  
-(14, 1, 14, '2025-02-25 09:15', '2025-02-25 12:15'),  
-(16, 1, 16, '2025-02-22 08:45', '2025-02-22 11:45'),  
-(15, 3, 15, '2025-02-20 14:20', '2025-02-20 17:20'),  
-(13, 2, 13, '2025-02-18 16:00', '2025-02-18 19:00'),  
-(12, 6, 12, '2025-02-15 11:10', '2025-02-15 14:10'),  
-(8, 1, 8, '2025-02-12 07:30', '2025-02-12 10:30'),  
-(7, 2, 7, '2025-02-10 15:45', '2025-02-10 18:45');
-
-
--- Inserindo dados na tabela Abrigo
--- Inserção de 10 registros
-INSERT INTO Abrigo (id_animal, data_entrada, status) VALUES
-(1, NULL, '2025-02-20', 'Disponível para adoção'),
-(4, NULL, '2025-02-18', 'Em recuperação médica'),
-(7, NULL, '2025-02-15', 'Aguardando vacinação'),
-(11, NULL, '2025-02-10', 'Processo de socialização'),
-(16, 2, '2025-02-05', 'Adotado'),
-(20, NULL, '2025-02-02', 'Em adaptação ao ambiente do abrigo'),
-(22, NULL, '2025-01-30', 'Disponível para adoção'),
-(24, NULL, '2025-01-25', 'Tratamento para pulgas e carrapatos'),
-(26, NULL, '2025-01-22', 'Aguardando castração'),
-(28, 5, '2025-01-20', 'Adotado');
-
-
--- select animal.id_animal, animal.status_animal, abrigo.id_abrigo from animal
--- inner join abrigo on abrigo.id_animal = animal.id_animal;
-
+INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada, data_saida) VALUES  
+(16, 6, 6, '2025-02-28 12:00', '2025-02-28 15:21'),  
+(9, 2, 7, '2025-02-10 15:45', '2025-02-10 18:45');
 
 
