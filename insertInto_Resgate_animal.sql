@@ -1,6 +1,7 @@
 
 use resgate_animal;
 
+
 INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES 
 (11995670984, 'Cachorro foi encontrada em uma estrada por um motorista, com um ferimento na pata após um atropelamento', NULL, 1),
 (11949489324, 'Filhote da raça São Bernardo foi encontrado, porém está saúdavel', NULL, 2),
@@ -162,9 +163,6 @@ INSERT INTO padrinho (nome, cpf, rg, telefone, email) VALUES
 ('Luiza Teixeira Vieira', '930.780.404-20', '90.735.345-6', '81919659451', 'luiza.teixeira@outlook.com');
 
 
-
-
-
 INSERT INTO doador (nome, cpf, rg, email) VALUES
 ('Lucas Silva Almeida', '345.853.235-87', '56.123.456-5', 'lucas.almeida@gmail.com'),
 ('Juliana Pereira Santos', '238.568.234-13', '34.123.456-3', 'juliana.santos@gmail.com'),
@@ -200,7 +198,14 @@ INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
 (250.00, '2025-09-10', 11, 3),
 (175.50, '2025-10-05', 14, 4),
 (300.00, '2025-11-12', 17, 5),
-(75.25, '2025-12-01', 16, 6);
+(75.25, '2025-12-01', 16, 6),
+(150.00, '2025-06-15', 21, 7),
+(180.00, '2025-07-20', 19, 8),
+(220.00, '2025-08-25', 28, 9),
+(90.50, '2025-09-30', 26, 10),
+(200.75, '2025-10-10', 30, 11),
+(180.25, '2025-11-05', 25, 12),
+(175.00, '2025-12-12', 27, 13);
 
 INSERT INTO adocao (id_animal, id_adotante, data_adoção) VALUES
 (16, 1, '2024-05-19 12:40:00'), 
