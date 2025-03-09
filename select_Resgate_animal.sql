@@ -67,3 +67,51 @@ SELECT a.raça, a.espécie, v.nome AS veterinario, q.data_entrada, q.data_saida
 FROM Animal a
 JOIN Quarentena q ON a.id_animal = q.id_animal
 JOIN veterinario v ON q.id_veterinario = v.id_veterinario;
+
+#Qual a quantidade de filhotes, adultos e idosos
+SELECT 
+CASE 
+WHEN idade <=1 THEN 'filhote'
+WHEN idade BETWEEN 2 AND 6 THEN 'adulto'
+ELSE 'idoso' END AS faixa_etaria,
+COUNT(*) AS quantidade FROM animal 
+GROUP BY faixa_etaria;
+   
+   
+# Quantidade de gatos e cachorros
+SELECT espécie, COUNT(*) 
+AS quantidade 
+FROM animal 
+WHERE espécie IN ('gato','cachorro')
+GROUP BY espécie;
+
+# Número de animais em tratamento, em quarentena , adotados e em abrigo
+SELECT status_animal,
+COUNT(*) AS quantidades_de_animais
+FROM animal 
+WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
+GROUP BY status_animal;
+
+#Status do animal , espécie e quantidade de animais em tratamento, no abrigo e em quarentena por gênero
+SELECT a.genero, a.status_animal, a.espécie,
+COUNT(a.id_animal) AS quantidade
+FROM animal a 
+WHERE a.status_animal IN ('em tratamento', 'em quarentena','no abrigo') 
+GROUP BY a.genero, a.status_animal,a.espécie;
+
+# Espécie de animais adotados e quantidade por gênero
+SELECT a.espécie,
+a.status_animal,
+a.genero,
+COUNT(a.id_animal)AS quantidade
+FROM animal a 
+JOIN adocao adoc ON
+a.id_animal = adoc.id_animal  GROUP BY a.espécie, a.status_animal,a.genero;
+
+
+# Número de animais em tratamento, em quarentena , adotados e em abrigo
+SELECT status_animal,
+COUNT(*) AS quantidades_de_animais
+FROM animal 
+WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
+GROUP BY status_animal;
