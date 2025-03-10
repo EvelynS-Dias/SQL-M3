@@ -145,16 +145,16 @@ Select year(data_adoção) as anos, month(data_adoção) as meses, count(id_anim
 from adocao
 group by data_adoção;
 
-# Tipos de denúncias mais frequentes
+# Imprima todas as denúncias já registradas.
 
-select 
-    d.tipo_denuncia, 
-    COUNT(d.id_denuncia) as total_ocorrencias,
-    d.descricao,
-    d.registro_ocorrencia
-from Denuncia d
-group by d.tipo_denuncia, d.descricao, d.registro_ocorrencia
-order by total_ocorrencias desc;
+SELECT 
+    d.registro_ocorrencia, 
+    d.descricao, 
+    COUNT(d.id_denuncia) AS total_ocorrencias
+FROM denuncia d
+GROUP BY d.registro_ocorrencia, d.descricao
+ORDER BY total_ocorrencias DESC;
+
 
 # Quais são os tratamentos mais realizados nas consultas veterinárias?
 
@@ -163,4 +163,6 @@ select
     COUNT(*) as total_ocorrencias 
 from consulta 
 group by tratamento 
+HAVING
+    COUNT(*) > 1
 order by total_ocorrencias desc;
