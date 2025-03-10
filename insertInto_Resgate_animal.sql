@@ -2,7 +2,6 @@
 
 use resgate_animal;
 
-
 INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES 
 (11995670984, 'Cachorro foi encontrada em uma estrada por um motorista, com um ferimento na pata após um atropelamento', NULL, 1),
 (11949489324, 'Filhote da raça São Bernardo foi encontrado, porém está saúdavel', NULL, 2),
@@ -11,14 +10,14 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES
 (11253258923, 'Gato encontrado em uma rodovia por ciclistas', NULL, 5),
 (11636325453, 'Cachorro foi encontrada em uma praia por banhistas', NULL, 6),
 (11457436344, 'Gato adulto encontrado por pedestres na rua, sem sinais aparentes de ferimentos e parece saudavel', NULL, 7),
-(11475328573, 'Cachorro foi encontrado em uma casa abandonada com sinais de anemia', NULL, 7),
-(11753643646, 'Gato encontrado com infestação de pulgas em um terreno baldio', NULL, 8),
-(11363469404, 'Cachorro encontrado com sintomas de cancêr', NULL, 9),
-(11359382523, 'Cachorro achado com dificuldade para se mover', NULL, 10),
-(11385328538, 'Gato com leves ferimentos, após uma briga com outro gato de rua', NULL, 11),
-(11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 12),
-(11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 13),
-(11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 14),
+(11475328573, 'Cachorro foi encontrado em uma casa abandonada com sinais de anemia', NULL, 8),
+(11753643646, 'Gato encontrado com infestação de pulgas em um terreno baldio', NULL, 9),
+(11363469404, 'Cachorro encontrado com sintomas de cancêr', NULL, 10),
+(11359382523, 'Cachorro achado com dificuldade para se mover', NULL, 11),
+(11385328538, 'Gato com leves ferimentos, após uma briga com outro gato de rua', NULL, 12),
+(11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 13),
+(11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 14),
+(11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 15),
 (11993456789, 'Filhote de Poodle encontrado saudável após denúncia de abandono', NULL, 16),
 (11993765432, 'Buldogue Inglês resgatado e tratado por desidratação grave', NULL, 17),
 (11997654321, 'Gato Ragdoll encontrado por moradores e vacinado', NULL, 18),
@@ -36,9 +35,8 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES
 (11991234568, 'Gato Maine Coon encontrado com ferimentos leves após briga', NULL, 30),
 (11992345680, 'Scottish Fold resgatado com infecção ocular e tratado', NULL, 31);
 
-
 INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
-('Border Collie', 'macho', 'cachorro', 3, 'em quarentena'),
+('SRD', 'macho', 'cachorro', 3, 'em quarentena'),
 ('São Bernardo', 'macho', 'cachorro', 1, 'adotado'),
 ('Siamês', 'macho', 'gato', 4, 'em quarentena'),
 ('Pastor Alemão', 'macho', 'cachorro', 4, 'em tratamento'),
@@ -46,12 +44,12 @@ INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
 ('Labrador', 'macho', 'cachorro', 3, 'em quarentena'),
 ('SRD', 'macho', 'gato', 4, 'adotado'),
 ('Schnauzer', 'macho', 'cachorro', 3, 'em tratamento'),
-('Persa', 'macho', 'gato', 5, 'em quarentena'),
+('Persa', 'macho', 'gato', 5, 'em tratamento'),
 ('Golden Retriever', 'macho', 'cachorro', 7, 'em quarentena'),
 ('Shih Tzu', 'macho', 'cachorro', 4, 'em quarentena'),
 ('Maine Coon', 'macho', 'gato', 5, 'no abrigo'),
 ('Scottish Fold', 'fêmea', 'gato', 3, 'em quarentena'),
-('Golden Retriever', 'macho', 'cachorro', 6, 'em tratamento'),
+('Golden Retriever', 'macho', 'cachorro', 7, 'em tratamento'),
 ('Persa', 'fêmea', 'gato', 5, 'em tratamento'),
 ('Beagle', 'fêmea', 'cachorro', 1, 'adotado'),
 ('Poodle', 'fêmea', 'cachorro', 1, 'adotado'),
@@ -61,13 +59,14 @@ INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
 ('Sphynx', 'fêmea', 'gato', 3, 'adotado'),
 ('Chow Chow', 'macho', 'cachorro', 7, 'em quarentena'),
 ('Akita', 'fêmea', 'cachorro', 3, 'em quarentena'),
-('Husky Siberiano', 'macho', 'cachorro', 5, 'em tratamento'),
-('Angorá', 'fêmea', 'gato', 2, 'no abrigo'),
-('Whippet', 'macho', 'cachorro', 4, 'adotado'),
-('Boxer', 'fêmea', 'cachorro', 5, 'adotado'),
-('SRD', 'macho', 'gato', 6, 'adotado'),
+('Husky Siberiano', 'macho', 'cachorro', 5, 'no abrigo'), 
+('Angorá', 'fêmea', 'gato', 2, 'adotado'), 
+('Whippet', 'macho', 'cachorro', 4, 'em tratamento'), 
+('SRD', 'fêmea', 'gato', 5, 'em tratamento'), 
+('SRD', 'macho', 'gato', 6, 'em quarentena'),  
 ('Siames', 'fêmea', 'gato', 3, 'em tratamento'),
 ('Maine Coon', 'macho', 'gato', 2, 'adotado');
+
 
 INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
 (1, 1, 'Em andamento'),
@@ -94,10 +93,10 @@ INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
 (22, 22, 'Em andamento'),
 (23, 23, 'Em andamento'),
 (24, 24, 'Em andamento'),
-(25, 25, 'Em andamento'),
-(26, 26, 'Resolvido'),
-(27, 27, 'Resolvido'),
-(28, 28, 'Resolvido'),
+(25, 25, 'Resolvido'),
+(26, 26, 'Em andamento'),
+(27, 27, 'Em andamento'),
+(28, 28, 'Em andamento'),
 (29, 29, 'Em andamento'),
 (30, 30, 'Resolvido');
 
@@ -109,7 +108,6 @@ INSERT INTO veterinario (nome, CRMV, cpf, RG, telefone, email) VALUES
 ('Dra. Ana Júlia', 'SP147258', '369.852.147-36', '36.985.214-7', 11987654321, 'ana.julia@gmail.com'),
 ('Dr. Felipe Rocha', 'SP963852', '258.741.369-25', '25.874.136-9', 11987654321, 'felipe.rocha@outlook.com'),
 ('Dr. Ricardo Alves', 'SP852963', '159.357.852-96', '15.935.785-2', 11987654321, 'ricardo.alves@gmail.com');
-
 
 INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, castracao, descricao_caso) VALUES
 (1, 1, 'Vacina Raiva', 'Antibiótico', TRUE, 'Cachorro chegou com ferimento na pata após atropelamento'),
@@ -140,8 +138,8 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (4, 26, NULL, 'Fisioterapia', FALSE, 'Cachorro com problemas motores, iniciou fisioterapia'),
 (6, 27, NULL, 'Exame oftalmológico', TRUE, 'Gato apresentou sinais de problemas de visão, exames realizados'),
 (2, 28, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'),
-(3, 29, NULL, 'Tratamento antipulgas', FALSE, 'Gato Abissínio encontrado com sinais de pulgas'), 
-(3, 30, 'Vacina Felina', 'Observação clínica', FALSE, 'Gato resgatado, em observação clínica após vacinação');
+(3, 29, NULL, 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'), 
+(3, 30, 'Vacina Felina', 'Observação clínica', FALSE, 'Gato saudável, em observação clínica após vacinação');
 
 
 -- A vacina V8 é um imunizante para cachorros que previne contra 8 doenças diferentes
@@ -252,3 +250,5 @@ INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada) VA
 (13, 3, 13, '2025-03-10 14:40'),
 (22,1,22, '2025-03-10 09:23'),
 (23,2,23, '2025-03-10 10:14');
+
+select id_animal from animal where status_animal = "em quarentena";
