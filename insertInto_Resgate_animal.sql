@@ -18,7 +18,7 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES
 (11863289593, 'Gato foi encontrado na rua com os olhos inchados', NULL, 13),
 (11573478332, 'Cachorro idoso foi encontrado na rua, ofegante por conta do calor', NULL, 14),
 (11574573239, 'Gato encontrado com manchas na pele e perda de pelos', NULL, 15),
-(11993456789, 'Filhote de Poodle encontrado saudável após denúncia de abandono', NULL, 16),
+(11993456789, 'Dois filhotes de cachorro encontrados saudáveis após denúncia de abandono', NULL, 16),
 (11993765432, 'Buldogue Inglês resgatado e tratado por desidratação grave', NULL, 17),
 (11997654321, 'Gato encontrado por moradores e vacinado', NULL, 18),
 (11996543210, 'Cachorro resgatado com dificuldades de locomoção', NULL, 19),
@@ -31,11 +31,12 @@ INSERT INTO denuncia (telefone, descricao, foto, registro_ocorrencia) VALUES
 (11992345679, 'Cachorro resgatado com problemas motores', NULL, 26),
 (11996543211, 'Gato encontrado apresentando algum tipo de problema de visão', NULL, 27),
 (11993456777, 'Dois gatos abandonados encontrados na rua ', NULL, 28),
-(11991234568, 'Gato Maine Coon encontrado com ferimentos leves após briga', NULL, 29),
-(11992345680, 'Gato resgatado com infecção ocular', NULL, 30);
+(11991234568, 'Gato encontrado com ferimentos leves após briga', NULL, 29),
+(11992345680, 'Gato abandonado encontrado na rua, aparentemente saudável', NULL, 30),
+(11382748265, '5 cachorros resgatados de uma rinha de Pitbulls', NULL, 31);
 
 INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
-('SRD', 'macho', 'cachorro', 3, 'em quarentena'),
+('SRD', 'macho', 'cachorro', 3, 'adotado'),
 ('São Bernardo', 'macho', 'cachorro', 1, 'adotado'),
 ('Siamês', 'macho', 'gato', 4, 'em quarentena'),
 ('Pastor Alemão', 'macho', 'cachorro', 4, 'em tratamento'),
@@ -43,32 +44,37 @@ INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
 ('Labrador', 'macho', 'cachorro', 3, 'em quarentena'),
 ('SRD', 'macho', 'gato', 4, 'adotado'),
 ('Schnauzer', 'macho', 'cachorro', 3, 'em tratamento'),
-('Persa', 'macho', 'gato', 5, 'em tratamento'),
+('Persa', 'macho', 'gato', 5, 'em quarentena'),
 ('Golden Retriever', 'macho', 'cachorro', 7, 'em quarentena'),
 ('Shih Tzu', 'macho', 'cachorro', 4, 'em quarentena'),
-('Maine Coon', 'macho', 'gato', 5, 'no abrigo'),
+('SRD', 'macho', 'gato', 5, 'no abrigo'),
 ('Scottish Fold', 'fêmea', 'gato', 3, 'em quarentena'),
 ('Golden Retriever', 'macho', 'cachorro', 7, 'em tratamento'),
-('Persa', 'fêmea', 'gato', 5, 'em tratamento'),
-('Beagle', 'fêmea', 'cachorro', 1, 'adotado'),
+('SRD', 'fêmea', 'gato', 5, 'em tratamento'),
+('Poodle', 'macho', 'cachorro', 1, 'adotado'),
 ('Poodle', 'fêmea', 'cachorro', 1, 'adotado'),
 ('Buldogue Inglês', 'macho', 'cachorro', 5, 'adotado'),
 ('Ragdoll', 'fêmea', 'gato', 4, 'adotado'),
-('Doberman', 'macho', 'cachorro', 6, 'adotado'),
+('SRD', 'macho', 'cachorro', 6, 'adotado'),
 ('Sphynx', 'fêmea', 'gato', 3, 'adotado'),
 ('Chow Chow', 'macho', 'cachorro', 7, 'em quarentena'),
 ('Akita', 'fêmea', 'cachorro', 3, 'em quarentena'),
 ('Husky Siberiano', 'macho', 'cachorro', 5, 'no abrigo'), 
 ('Angorá', 'fêmea', 'gato', 2, 'adotado'), 
 ('Whippet', 'macho', 'cachorro', 4, 'em tratamento'), 
-('SRD', 'fêmea', 'gato', 5, 'em tratamento'), 
+('SRD', 'fêmea', 'gato', 5, 'em quarentena'), 
 ('SRD', 'macho', 'gato', 6, 'em quarentena'),  
-('Siames', 'fêmea', 'gato', 3, 'em tratamento'),
-('Maine Coon', 'macho', 'gato', 2, 'adotado');
-
+('Maine Coon', 'macho', 'gato', 2, 'adotado'),
+('Siames', 'fêmea', 'gato', 4, 'em tratamento'),
+('SRD', 'macho', 'gato', 3, 'no abrigo'),
+('Pitbull', 'macho', 'cachorro', 7, 'em tratamento'),
+('Pitbull', 'fêmea', 'cachorro', 4, 'em tratamento'),
+('Pitbull', 'fêmea', 'cachorro', 6, 'em tratamento'),
+('Pitbull', 'macho', 'cachorro', 5, 'em tratamento'),
+('Pitbull', 'macho', 'cachorro', 5, 'em tratamento');
 
 INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
-(1, 1, 'Em andamento'),
+(1, 1, 'Resolvido'),
 (2, 2, 'Resolvido'),
 (3, 3, 'Em andamento'),
 (4, 4, 'Em andamento'),
@@ -84,20 +90,26 @@ INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
 (14, 14, 'Em andamento'),
 (15, 15, 'Em andamento'),
 (16, 16, 'Resolvido'),
-(17, 17, 'Resolvido'),
-(18, 18, 'Resolvido'),
-(19, 19, 'Resolvido'),
-(20, 20, 'Resolvido'),
-(21, 21, 'Resolvido'),
-(22, 22, 'Em andamento'),
-(23, 23, 'Em andamento'),
-(24, 24, 'Em andamento'),
-(25, 25, 'Resolvido'),
-(26, 26, 'Em andamento'),
-(27, 27, 'Em andamento'),
-(28, 28, 'Em andamento'),
-(29, 29, 'Em andamento'),
-(30, 30, 'Resolvido');
+(16, 17, 'Resolvido'),
+(17, 18, 'Resolvido'),
+(18, 19, 'Resolvido'),
+(19, 20, 'Resolvido'),
+(20, 21, 'Resolvido'),
+(21, 22, 'Resolvido'),
+(22, 23, 'Em andamento'),
+(23, 24, 'Em andamento'),
+(24, 25, 'Em andamento'),
+(25, 26, 'Resolvido'),
+(26, 27, 'Em andamento'),
+(27, 28, 'Em andamento'),
+(28, 29, 'Em andamento'),
+(28, 30, 'Em andamento'),
+(29, 31, 'Resolvido'),
+(31, 32, 'Em andamento'),
+(31, 33, 'Em andamento'),
+(31, 34, 'Em andamento'),
+(31, 35, 'Em andamento'),
+(31, 36, 'Em andamento');
 
 
 INSERT INTO veterinario (nome, CRMV, cpf, RG, telefone, email) VALUES
@@ -113,6 +125,7 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (2, 2, 'Vacina V10', 'Vermífugo e vacinação V10', FALSE, 'Filhote saudável, apenas vermifugação'),
 (3, 3, 'Vacina Antirrábica', 'Tratamento de pele e vacinação antirrábica', FALSE, 'Gato com dermatite leve'),
 (4, 4, NULL, 'Cirurgia de esterilização', TRUE, 'Cachorro castrado e em recuperação'),
+(1, 1, NULL, 'Check-up', TRUE, 'Cachorro que tinha antes um ferimento na pata, agora está saudável.'),
 (5, 5, 'Vacina Felina', 'Observação clínica e aplicação de vacinação felina', FALSE, 'Gato resgatado, avaliação inicial realizada'),
 (6, 6, NULL, 'Hidratação e antibiótico', TRUE, 'Cachorro resgatado com sinais de desidratação e infecção de pele'),
 (2, 7, 'Vacina Antirrábica', 'Check-up geral', FALSE, 'Gato adulto em boas condições, apenas vacinação realizada'),
@@ -136,9 +149,15 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (5, 25, 'Vacina Felina', 'Tratamento antiparasitário', FALSE, 'Gato resgatado, vacinação e antiparasitário aplicados'),
 (4, 26, NULL, 'Fisioterapia', FALSE, 'Cachorro com problemas motores, iniciou fisioterapia'),
 (6, 27, NULL, 'Exame oftalmológico', TRUE, 'Gato apresentou sinais de problemas de visão, exames realizados'),
-(2, 28, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'),
-(3, 29, NULL, 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'), 
-(3, 30, 'Vacina Felina', 'Observação clínica', FALSE, 'Gato saudável, em observação clínica após vacinação');
+(2, 28, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato com infestação de pulgas, tratamento iniciado'),
+(2, 29, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'),
+(3, 30, NULL, 'Curativos e antibióticos', FALSE, 'Gato com leves feridas causadas por briga na rua.'), 
+(3, 31, 'Vacina Felina', 'Observação clínica', FALSE, 'Gato saudável, em observação clínica após vacinação'),
+(4, 32, 'Vacina Raiva', 'Curativos e antibiótico', TRUE, 'Cachorro resgatado de rinha, com múltiplos ferimentos'),
+(5, 33, 'Vacina Raiva', 'Curativos e antibiótico', TRUE, 'Cachorro resgatado de rinha, com fraturas e sinais de desnutrição'),
+(2, 34, NULL, 'Hidratação e observação', FALSE, 'Cachorro resgatado de rinha, com sinais de estresse e desidratação'),
+(2, 35, 'Vacina Raiva', 'Pontos cirúrgicos e antibiótico', TRUE, 'Cachorro resgatado de rinha, com cortes profundos'),
+(1, 36, NULL, 'Tratamento para infecção', FALSE, 'Cachorro resgatado de rinha, com infecção na pele e anemia');
 
 
 -- A vacina V8 é um imunizante para cachorros que previne contra 8 doenças diferentes
@@ -195,15 +214,14 @@ INSERT INTO apadrinhamento (valor, data_, id_animal, id_padrinho) VALUES
 (100.00, '2025-08-20', 8, 2),
 (250.00, '2025-09-10', 11, 3),
 (175.50, '2025-10-05', 14, 4),
-(300.00, '2025-11-12', 17, 5),
-(75.25, '2025-12-01', 16, 6),
-(150.00, '2025-06-15', 21, 7),
-(180.00, '2025-07-20', 19, 8),
+(300.00, '2025-11-12', 3, 5),
+(75.25, '2025-12-01', 5, 6),
+(150.00, '2025-06-15', 12, 7),
+(180.00, '2025-07-20', 21, 8),
 (220.00, '2025-08-25', 28, 9),
 (90.50, '2025-09-30', 26, 10),
 (200.75, '2025-10-10', 30, 11),
-(180.25, '2025-11-05', 25, 12),
-(175.00, '2025-12-12', 27, 13);
+(180.25, '2025-11-05', 32, 12);
 
 INSERT INTO adocao (id_animal, id_adotante, data_adoção) VALUES
 (16, 1, '2024-05-19 12:40:00'), 
@@ -240,14 +258,12 @@ INSERT INTO Doacao (id_doador, valor, tipo_doacao, data_doação) VALUES
 (5, 0.00, 'medicamentos', '2025-03-26');
 
 INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada) VALUES  
-(1, 1, 1, '2025-01-15 10:30'),  
 (3, 3, 3, '2025-02-10 15:45'),  
-(6, 6, 6, '2025-02-28 12:00'),  
-(9, 2, 9, '2025-03-01 11:00'),  
-(10, 4, 10, '2025-03-08 12:30'),  
-(11, 5, 11, '2025-03-09 08:50'),  
-(13, 3, 13, '2025-03-10 14:40'),
-(22,1,22, '2025-03-10 09:23'),
-(23,2,23, '2025-03-10 10:14');
-
-select id_animal from animal where status_animal = "em quarentena";
+(6, 6, 7, '2025-02-28 12:00'),  
+(10, 4, 11, '2025-03-08 12:30'),  
+(11, 5, 12, '2025-03-09 08:50'),  
+(13, 3, 14, '2025-03-10 14:40'),
+(22,1,23, '2025-03-10 09:23'),
+(23,2,24, '2025-03-12 10:14'),
+(27,2,28, '2025-03-25 14:14'),
+(28,2,29, '2025-03-25 14:40');

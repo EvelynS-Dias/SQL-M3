@@ -1,9 +1,11 @@
+-- GRAFICOS FELIPE 
 # Qual a quantidade de animais resgatados
 SELECT COUNT(id_animal) FROM Animal;
 
 # Qual a quantidade de doações
 SELECT COUNT(id_doacao) FROM Doacao;
 
+-- GRAFICOS EVELYN 
 # Filhote, adulto idoso.
 Select id_animal, idade,
 case  
@@ -35,6 +37,8 @@ group by v.nome, v.email;
 
 #Quantidade de doação em dinheiro recebido
 select SUM(valor) as valor_total from doacao;
+
+-- GRÁFICOS DAIANE
 #Verifica se o status do animal na tabela Animal corresponde ao fato de ele estar em quarentena. Essa consulta ajudará a garantir 
 #que os animais listados na tabela Quarentena tenham o status correto na tabela Animal.
 SELECT 
@@ -78,6 +82,8 @@ FROM Animal a
 JOIN Quarentena q ON a.id_animal = q.id_animal
 JOIN veterinario v ON q.id_veterinario = v.id_veterinario;
 
+
+-- GRÁFICOS GISELE
 #Qual a quantidade de filhotes, adultos e idosos
 SELECT 
 CASE 
