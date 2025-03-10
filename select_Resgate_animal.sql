@@ -35,6 +35,16 @@ group by v.nome, v.email;
 
 #Quantidade de doação em dinheiro recebido
 select SUM(valor) as valor_total from doacao;
+#Verifica se o status do animal na tabela Animal corresponde ao fato de ele estar em quarentena. Essa consulta ajudará a garantir 
+#que os animais listados na tabela Quarentena tenham o status correto na tabela Animal.
+SELECT 
+    Q.id_animal,
+    A.status_animal,
+    Q.data_entrada,
+    Q.id_veterinario,
+    Q.id_consulta
+FROM Quarentena Q
+JOIN Animal A ON Q.id_animal = A.id_animal;
 
 #Listar todos os animais que estão em quarentena
 SELECT * FROM Animal WHERE status_animal = 'em quarentena';
