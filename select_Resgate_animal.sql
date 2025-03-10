@@ -141,10 +141,15 @@ FROM Quarentena
 WHERE data_saida IS NOT NULL;
 
 # Quantos animais foram adotados nos últimos 6 meses?
+# Quantidade de animais adotados por mês. 
 
-SELECT COUNT(*) AS total_adotados
+/*SELECT COUNT(*) AS total_adotados
 FROM Adocao
-WHERE data_adocao >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH);
+WHERE data_adoção >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH); */
+
+Select year(data_adoção) as anos, month(data_adoção) as meses, count(id_animal) as total_adotados
+from adocao
+group by data_adoção;
 
 # Qual o tempo médio de permanência dos animais no abrigo antes da adoção?
 
