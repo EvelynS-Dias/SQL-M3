@@ -131,3 +131,26 @@ COUNT(*) AS quantidades_de_animais
 FROM animal 
 WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
 GROUP BY status_animal;
+
+-- GRÁFICOS HELEN
+
+# Qual o tempo médio de quarentena dos animais?
+
+SELECT AVG(DATEDIFF(data_saida, data_entrada)) AS media_dias_quarentena
+FROM Quarentena
+WHERE data_saida IS NOT NULL;
+
+# Quantos animais foram adotados nos últimos 6 meses?
+
+SELECT COUNT(*) AS total_adotados
+FROM Adocao
+WHERE data_adocao >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH);
+
+# Qual o tempo médio de permanência dos animais no abrigo antes da adoção?
+
+SELECT AVG(DATEDIFF(ad.data_adocao, a.data_resgate)) AS media_dias_no_abrigo
+FROM Adocao ad
+JOIN Animal a ON ad.id_animal = a.id_animal
+WHERE ad.data_adocao IS NOT NULL;
+
+
