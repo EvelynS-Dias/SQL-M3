@@ -2,10 +2,6 @@ create database Resgate_Animal;
 
 use Resgate_Animal;
 
-
-
- drop database resgate_animal;
-
 create table Animal(
 id_animal INTEGER PRIMARY KEY AUTO_INCREMENT, 
 raça VARCHAR(150) NOT NULL,

@@ -112,7 +112,6 @@ INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
 (31, 35, 'Em andamento'),
 (31, 36, 'Em andamento');
 
-
 INSERT INTO veterinario (nome, CRMV, cpf, RG, telefone, email) VALUES
 ('Dr. João Silva', 'SP123456', '123.456.789-01', '12.345.678-9', 11987654321, 'joao.silva@gmail.com'),
 ('Dra. Maria Oliveira', 'SP654321', '987.654.321-09', '98.765.432-1', 11987654321, 'maria.oliveira@email.com'),
@@ -146,7 +145,7 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (6, 21, 'Vacina Antirrábica', 'Tratamento de feridas', TRUE, 'Gato resgatado com feridas leves, recebeu vacinação'),
 (2, 22, 'Vacina V8', 'Antibiótico', TRUE, 'Cachorro em tratamento de infecção generalizada'),
 (1, 23, NULL, 'Cirurgia de remoção de tumor', TRUE, 'Cachorro passou por cirurgia para remoção de tumor benigno'),
-(3, 24, 'Vacina Polivalente', 'Check-up', FALSE, 'Cachorro saudável, apenas vacinação e check-up realizados'),
+(3, 24, 'Vacina V10', 'Check-up', FALSE, 'Cachorro saudável, apenas vacinação e check-up realizados'),
 (5, 25, 'Vacina Felina', 'Tratamento antiparasitário', FALSE, 'Gato resgatado, vacinação e antiparasitário aplicados'),
 (4, 26, NULL, 'Fisioterapia', FALSE, 'Cachorro com problemas motores, iniciou fisioterapia'),
 (6, 27, NULL, 'Exame oftalmológico', TRUE, 'Gato apresentou sinais de problemas de visão, exames realizados'),
@@ -257,13 +256,13 @@ INSERT INTO Doacao (id_doador, valor, tipo_doacao, data_doação) VALUES
 (11, 0.00, 'alimentos', '2025-03-16'),
 (5, 0.00, 'medicamentos', '2025-03-26');
 
-INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada) VALUES  
-(3, 3, 3, '2025-02-10 15:45'),  
-(6, 6, 7, '2025-02-28 12:00'),  
-(10, 4, 11, '2025-03-08 12:30'),  
-(11, 5, 12, '2025-03-09 08:50'),  
-(13, 3, 14, '2025-03-10 14:40'),
-(22,1,23, '2025-03-10 09:23'),
-(23,2,24, '2025-03-12 10:14'),
-(27,2,28, '2025-03-25 14:14'),
-(28,2,29, '2025-03-25 14:40');
+INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada, data_saida) VALUES  
+(3, 3, 3, '2025-02-10 15:45', NULL),  
+(6, 6, 7, '2025-02-28 12:00', NULL),  
+(10, 4, 11, '2025-03-08 12:30', NULL),  
+(11, 5, 12, '2025-03-09 08:50', NULL),  
+(13, 3, 14, '2025-03-10 14:40', NULL),
+(22,1,23, '2025-03-10 09:23', NULL),
+(23,2,24, '2025-03-12 10:14', NULL),
+(27,2,28, '2025-03-25 14:14', NULL),
+(28,2,29, '2025-03-25 14:40', NULL);
