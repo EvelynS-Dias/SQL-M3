@@ -43,7 +43,7 @@ INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
 ('Scottish Fold', 'fêmea', 'gato', 3, 'no abrigo'),
 ('Labrador', 'macho', 'cachorro', 3, 'em quarentena'),
 ('SRD', 'macho', 'gato', 4, 'adotado'),
-('Schnauzer', 'macho', 'cachorro', 3, 'adotado'),
+('Schnauzer', 'macho', 'cachorro', 3, 'em tratamento'),
 ('Persa', 'macho', 'gato', 5, 'em quarentena'),
 ('Golden Retriever', 'macho', 'cachorro', 7, 'em quarentena'),
 ('Shih Tzu', 'macho', 'cachorro', 4, 'em quarentena'),
@@ -72,6 +72,7 @@ INSERT INTO Animal (raça, genero, espécie, idade, status_animal) VALUES
 ('Pitbull', 'fêmea', 'cachorro', 6, 'em tratamento'),
 ('Pitbull', 'macho', 'cachorro', 5, 'em tratamento'),
 ('Pitbull', 'macho', 'cachorro', 5, 'em tratamento');
+
 
 INSERT INTO denuncia_animal (id_denuncia, id_animal, status) VALUES
 (1, 1, 'Resolvido'),
@@ -144,12 +145,10 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (5, 20, NULL, 'Tratamento ortopédico', FALSE, 'Cachorro com problema de locomoção, em tratamento ortopédico'),
 (6, 21, 'Vacina Antirrábica', 'Tratamento de feridas', TRUE, 'Gato resgatado com feridas leves, recebeu vacinação'),
 (2, 22, 'Vacina V8', 'Antibiótico', TRUE, 'Cachorro em tratamento de infecção generalizada'),
-(1, 8, 'Vacina V10', 'Check-up', TRUE, 'Cachorro apresenta-se saudável, apenas foi feito o check-up e vacinação'),
 (1, 23, NULL, 'Cirurgia de remoção de tumor', TRUE, 'Cachorro passou por cirurgia para remoção de tumor benigno'),
 (3, 24, 'Vacina Polivalente', 'Check-up', FALSE, 'Cachorro saudável, apenas vacinação e check-up realizados'),
 (5, 25, 'Vacina Felina', 'Tratamento antiparasitário', FALSE, 'Gato resgatado, vacinação e antiparasitário aplicados'),
 (4, 26, NULL, 'Fisioterapia', FALSE, 'Cachorro com problemas motores, iniciou fisioterapia'),
-(6, 21, NULL, 'Check-up', TRUE, 'Após o tratamento das feridas, o gato encontra-se em boas condições.'),
 (6, 27, NULL, 'Exame oftalmológico', TRUE, 'Gato apresentou sinais de problemas de visão, exames realizados'),
 (2, 28, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato com infestação de pulgas, tratamento iniciado'),
 (2, 29, 'Vacina Antirrábica', 'Tratamento contra pulgas', FALSE, 'Gato infestado com pulgas, tratamento iniciado'),
@@ -160,6 +159,7 @@ INSERT INTO consulta (id_veterinario, id_animal, vacina_aplicada, tratamento, ca
 (2, 34, NULL, 'Hidratação e observação', FALSE, 'Cachorro resgatado de rinha, com sinais de estresse e desidratação'),
 (2, 35, 'Vacina Raiva', 'Pontos cirúrgicos e antibiótico', TRUE, 'Cachorro resgatado de rinha, com cortes profundos'),
 (1, 36, NULL, 'Tratamento para infecção', FALSE, 'Cachorro resgatado de rinha, com infecção na pele e anemia');
+
 
 -- A vacina V8 é um imunizante para cachorros que previne contra 8 doenças diferentes
 -- Vacina antirrábica é uma vacina inativada que previne a raiva, uma doença viral que pode ser transmitida por animais infectados. 
@@ -260,11 +260,10 @@ INSERT INTO Doacao (id_doador, valor, tipo_doacao, data_doação) VALUES
 INSERT INTO Quarentena (id_animal, id_veterinario, id_consulta, data_entrada) VALUES  
 (3, 3, 3, '2025-02-10 15:45'),  
 (6, 6, 7, '2025-02-28 12:00'),  
-(9, 3, 10, '2025-02-28 12:50'),  
 (10, 4, 11, '2025-03-08 12:30'),  
 (11, 5, 12, '2025-03-09 08:50'),  
 (13, 3, 14, '2025-03-10 14:40'),
 (22,1,23, '2025-03-10 09:23'),
-(23,2,25, '2025-03-12 10:14'),
-(27,2,30, '2025-03-25 14:14'),
-(28,2,31, '2025-03-25 14:40');
+(23,2,24, '2025-03-12 10:14'),
+(27,2,28, '2025-03-25 14:14'),
+(28,2,29, '2025-03-25 14:40');
