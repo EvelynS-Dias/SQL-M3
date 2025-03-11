@@ -4,7 +4,7 @@ use Resgate_Animal;
 
 
 
-/* drop database resgate_animal;*/ 
+ drop database resgate_animal;
 
 create table Animal(
 id_animal INTEGER PRIMARY KEY AUTO_INCREMENT, 

@@ -1,3 +1,8 @@
+-- GRÁFICOS RIANE 
+Select status, count(id_denuncia_animal) quantidade_denuncias_resolvidas from denuncia_animal
+group by status;
+
+
 -- GRAFICOS FELIPE 
 # Qual a quantidade de animais resgatados
 SELECT COUNT(id_animal) FROM Animal;
