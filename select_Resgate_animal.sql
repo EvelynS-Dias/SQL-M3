@@ -139,12 +139,6 @@ GROUP BY status_animal;
 
 -- GRÁFICOS HELEN
 
-# Qual o tempo médio de quarentena dos animais?
-
-SELECT AVG(DATEDIFF(data_saida, data_entrada)) AS media_dias_quarentena
-FROM Quarentena
-WHERE data_saida IS NOT NULL;
-
 # Quantos animais foram adotados nos últimos 6 meses?
 # Quantidade de animais adotados por mês. 
 
@@ -156,11 +150,24 @@ Select year(data_adoção) as anos, month(data_adoção) as meses, count(id_anim
 from adocao
 group by data_adoção;
 
-# Qual o tempo médio de permanência dos animais no abrigo antes da adoção?
+# Imprima todas as denúncias já registradas.
 
-SELECT AVG(DATEDIFF(ad.data_adocao, a.data_resgate)) AS media_dias_no_abrigo
-FROM Adocao ad
-JOIN Animal a ON ad.id_animal = a.id_animal
-WHERE ad.data_adocao IS NOT NULL;
+SELECT 
+    d.registro_ocorrencia, 
+    d.descricao, 
+    COUNT(d.id_denuncia) AS total_ocorrencias
+FROM denuncia d
+GROUP BY d.registro_ocorrencia, d.descricao
+ORDER BY total_ocorrencias DESC;
 
 
+# Quais são os tratamentos mais realizados nas consultas veterinárias?
+
+select
+    tratamento, 
+    COUNT(*) as total_ocorrencias 
+from consulta 
+group by tratamento 
+HAVING
+    COUNT(*) > 1
+order by total_ocorrencias desc;
