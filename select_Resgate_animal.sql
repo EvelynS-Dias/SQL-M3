@@ -1,6 +1,18 @@
 -- GRÁFICOS RIANE 
-Select status, count(id_denuncia_animal) quantidade_denuncias_resolvidas from denuncia_animal
-group by status;
+#Quantos animais estão agora disponíveis para adoção 
+select espécie, raça, count(id_animal) animais_disponíveis from animal where status_animal = "no abrigo"
+group by espécie, raça;
+
+#Quem são os maiores doadores
+Select d.nome, d.email, count(doa.id_doacao) as total_doações 
+from doador d 
+inner join doacao doa on d.id_doador = doa.id_doador
+group by d.nome, d.email
+order by count(doa.id_doacao ) desc 
+limit 5; 
+
+# Quantos animais tem padrinhos 
+Select count(id_animal) as quantidade from apadrinhamento;
 
 
 -- GRAFICOS FELIPE 
