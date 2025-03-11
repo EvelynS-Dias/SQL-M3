@@ -5,6 +5,25 @@ SELECT COUNT(id_animal) FROM Animal;
 # Qual a quantidade de doações
 SELECT COUNT(id_doacao) FROM Doacao;
 
+# Qual nosso maior tipo de doação?
+SELECT tipo_doacao, COUNT(*) AS total_doacoes 
+FROM Doacao
+GROUP BY tipo_doacao
+ORDER BY total_doacoes DESC;
+
+# Qual vacina foi a mais utilizada nos tratamentos?
+SELECT vacina_aplicada, COUNT(*) AS total_vacinas
+FROM Consulta
+WHERE vacina_aplicada IS NOT NULL
+GROUP BY vacina_aplicada 
+ORDER BY total_vacinas DESC;
+
+# Qual a raça de animal mais foi tirada das ruas?
+SELECT raça, COUNT(*) AS total_raças
+FROM Animal
+GROUP BY raça
+ORDER BY total_raças DESC;
+
 -- GRAFICOS EVELYN 
 # Filhote, adulto idoso.
 Select id_animal, idade,
@@ -131,38 +150,3 @@ COUNT(*) AS quantidades_de_animais
 FROM animal 
 WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
 GROUP BY status_animal;
-
--- GRÁFICOS HELEN
-
-# Quantos animais foram adotados nos últimos 6 meses?
-# Quantidade de animais adotados por mês. 
-
-/*SELECT COUNT(*) AS total_adotados
-FROM Adocao
-WHERE data_adoção >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH); */
-
-Select year(data_adoção) as anos, month(data_adoção) as meses, count(id_animal) as total_adotados
-from adocao
-group by data_adoção;
-
-# Imprima todas as denúncias já registradas.
-
-SELECT 
-    d.registro_ocorrencia, 
-    d.descricao, 
-    COUNT(d.id_denuncia) AS total_ocorrencias
-FROM denuncia d
-GROUP BY d.registro_ocorrencia, d.descricao
-ORDER BY total_ocorrencias DESC;
-
-
-# Quais são os tratamentos mais realizados nas consultas veterinárias?
-
-select
-    tratamento, 
-    COUNT(*) as total_ocorrencias 
-from consulta 
-group by tratamento 
-HAVING
-    COUNT(*) > 1
-order by total_ocorrencias desc;
