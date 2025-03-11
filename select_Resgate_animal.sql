@@ -150,3 +150,34 @@ COUNT(*) AS quantidades_de_animais
 FROM animal 
 WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
 GROUP BY status_animal;
+
+
+-- GRÁFICOS HELEN
+
+# Qual a proporção de denúncias resolvidas em relação às denúncias em andamento?
+
+SELECT status, COUNT(*) AS total
+FROM denuncia_animal
+GROUP BY status;
+
+# Quais são os tratamentos mais realizados nas consultas veterinárias?
+
+select
+    tratamento, 
+    COUNT(*) as total_ocorrencias 
+from consulta 
+group by tratamento 
+HAVING
+    COUNT(*) > 1
+order by total_ocorrencias desc;
+
+# Listar todas as denúncias já registradas.
+
+SELECT 
+    d.registro_ocorrencia, 
+    d.descricao, 
+    COUNT(d.id_denuncia) AS total_ocorrencias
+FROM denuncia d
+GROUP BY d.registro_ocorrencia, d.descricao
+ORDER BY total_ocorrencias DESC;
+
