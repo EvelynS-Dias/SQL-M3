@@ -238,6 +238,8 @@ INSERT INTO adocao (id_animal, id_adotante, data_adoção) VALUES
 (28, 10, '2025-02-19 11:45:00'), 
 (30, 11, '2025-03-12 17:50:00'); 
 
+select * from denuncia_animal;
+
 INSERT INTO Doacao (id_doador, valor, tipo_doacao, data_doação) VALUES
 (1, 0.00, 'outros', '2024-08-30'),
 (2, 100.00, 'cobertores', '2024-09-05'),

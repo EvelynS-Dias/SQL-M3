@@ -14,6 +14,8 @@ limit 5;
 # Quantos animais tem padrinhos 
 Select count(id_animal) as quantidade from apadrinhamento;
 
+Select * from quarentena; 
+
 
 -- GRAFICOS FELIPE 
 # Qual a quantidade de animais resgatados
