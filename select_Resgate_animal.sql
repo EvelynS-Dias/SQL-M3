@@ -153,20 +153,13 @@ GROUP BY a.genero, a.status_animal,a.espécie;
 
 # Espécie de animais adotados e quantidade por gênero
 SELECT a.espécie,
-a.status_animal,
 a.genero,
 COUNT(a.id_animal)AS quantidade
 FROM animal a 
 JOIN adocao adoc ON
-a.id_animal = adoc.id_animal  GROUP BY a.espécie, a.status_animal,a.genero;
-
-
-# Número de animais em tratamento, em quarentena , adotados e em abrigo
-SELECT status_animal,
-COUNT(*) AS quantidades_de_animais
-FROM animal 
-WHERE status_animal IN('em quarentena','no abrigo','em tratamento','adotado') 
-GROUP BY status_animal;
+a.id_animal = adoc.id_animal 
+WHERE status_animal='adotado'
+GROUP BY a.espécie, a.genero;
 
 
 -- GRÁFICOS HELEN
