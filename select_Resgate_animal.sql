@@ -14,8 +14,18 @@ limit 5;
 # Quantos animais tem padrinhos 
 Select count(id_animal) as quantidade from apadrinhamento;
 
-Select * from quarentena; 
+#Animais que estão na quarentena e os que já sairam
+Select id_animal, 
+case
+when data_saida is null then "está em quarentena"
+else "Saiu da quarentena" end as status
+from quarentena;
 
+#Quantidade de animais que sairam da quarentena e animais que estão na querentena
+select 
+count(case when data_saida is null then 1 end) as "saiu da quarentena",
+count(case when data_saida is not null then 1 end) as "está em quarentena"
+from quarentena;
 
 -- GRAFICOS FELIPE 
 # Qual a quantidade de animais resgatados
