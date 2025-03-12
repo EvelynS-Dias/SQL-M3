@@ -4,7 +4,8 @@ cuidados, a fase onde ele recebe os tratamentos veterinários até a fase final 
 ajuda a monitorar e a cuidar dos animais e fornecer a eles a oportunidade de conseguirem um lar. 
 
 * [dbdiagram](https://dbdiagram.io/d/ONG-resgate-animais-67b8c68b263d6cf9a008191b)  - MODELO DE RELACIONAMENTOS 
-* [BRMW](https://app.brmodeloweb.com/#!/publicview/67b0dba0196e5b4cebac5309) - MODELO CONCEITUAL 
+* [BRMW](https://app.brmodeloweb.com/#!/publicview/67b0dba0196e5b4cebac5309) - MODELO CONCEITUAL
+* [slides](https://www.canva.com/design/DAGgs3zI63U/M1gPocKAYVmN3dzKIV3jqA/view?utm_content=DAGgs3zI63U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4d32f1c5b4) - SLIDES 
 
 ## As entidades do sistema são:
 * Denúncia: Denúncia vai conter a foto, a descrição do caso da denúncia e o status da denúncia, se ela já foi resolvida ou se ainda está em aberta.
