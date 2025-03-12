@@ -53,6 +53,13 @@ FROM Animal
 GROUP BY raça
 ORDER BY total_raças DESC;
 
+# Quantidade de dinheiro doada por dia
+SELECT data_doação, SUM(valor) AS total_arrecadado
+FROM Doacao
+WHERE tipo_doacao = 'dinheiro'
+GROUP BY data_doação
+ORDER BY data_doação;
+
 -- GRAFICOS EVELYN 
 # Filhote, adulto idoso.
 Select id_animal, idade,
