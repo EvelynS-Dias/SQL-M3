@@ -11,12 +11,12 @@ ajuda a monitorar e a cuidar dos animais e fornecer a eles a oportunidade de con
 * Denúncia: Denúncia vai conter a foto, a descrição do caso da denúncia e o status da denúncia, se ela já foi resolvida ou se ainda está em aberta. Uma denuncia só é considerada resolvida se o animal já foi adotado. 
 * Denúncia_animal: Tabela intermediária entre denúncia e denúncia animal. Em uma denúncia, pode conter vários animais, como o animal também pode estar em várias denúncias.
 * Animal: Contém todos os detalhes sobre o animal, idade, espécie, status_animal que irá registrar se ele pode ser levado para o abrigo, esta em tratamento ou se ele deverá permanecer em quarentena caso seu problema seja grave ou contagioso.
-* Consulta: Vai conter todas as informações de todos os procedimentos que o animal fez. Irá conter os tratamentos, as vacinas já aplicadas, se ele já passou por uma castração, vai conter o veterinário responsável pelo animal e pelo seu tratamento. 
+* Consulta: Vai conter todas as informações de todos os procedimentos que o animal fez. Irá conter os tratamentos, as vacinas já aplicadas, se ele já passou por uma castração, vai conter o veterinário responsável pelo animal e pelo seu tratamento. Apenas um animal e veterinário podem participar de uma consulta por vez.
 * Veterinario: Todas as informações necessárias do veterinário - Nome, CPF, RG, telefone, CRM, e-mail.
-* Quarentena: Quarentena vai registrar todos os animais que estão de quarentena. Nele vai conter as informações do animal, do veterinário responsável por ele. 
-* Adoção: Registra as adoções de animais como as informações do animal, do adotante, documentação e a data de adoção.
+* Quarentena: Quarentena vai registrar todos os animais que estão de quarentena. Nele vai conter as informações do animal, do veterinário responsável por ele. Um veterinário pode estar responsável por vários animais na quarentena, mas o animal terá apenas 1 veterinário que esteja atento à sua quarentena.
+* Adoção: Registra as adoções de animais como as informações do animal, do adotante, documentação e a data de adoção. Uma pessoa pode adotar um ou mais animais, mas o animal pode participar apenas de uma adoção.
 * Adotante:  Todas as informações necessárias do adotante - Nome, CPF, RG, telefone, e-mail, endereço.
-* Doação: Armazena as doações recebidas 
+* Doação: Armazena as doações recebidas, o valor, o tipo de doação e a data que acomteceu a doação. Apenas uma pessoa é vinculada com uma doação, e ela pode fazer varias doações ao longo do tempo. 
 * Apadrinhamento: Vai mostrar quem apadrinhou o animal, o valor no apadrinhamento, o padrinho e o animal apadrinhado
 * Padrinho e doador: Todas as informações do padrinho e do doador, Nome, CPF, RG, telefone, e-mail. 
 
