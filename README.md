@@ -16,7 +16,7 @@ ajuda a monitorar e a cuidar dos animais e fornecer a eles a oportunidade de con
 * Quarentena: Quarentena vai registrar todos os animais que estão de quarentena. Nele vai conter as informações do animal, do veterinário responsável por ele. Um veterinário pode estar responsável por vários animais na quarentena, mas o animal terá apenas 1 veterinário que esteja atento à sua quarentena.
 * Adoção: Registra as adoções de animais como as informações do animal, do adotante, documentação e a data de adoção. Uma pessoa pode adotar um ou mais animais, mas o animal pode participar apenas de uma adoção.
 * Adotante:  Todas as informações necessárias do adotante - Nome, CPF, RG, telefone, e-mail, endereço.
-* Doação: Armazena as doações recebidas, o valor, o tipo de doação e a data que acomteceu a doação. Apenas uma pessoa é vinculada com uma doação, e ela pode fazer varias doações ao longo do tempo. 
+* Doação: Armazena as doações recebidas, o valor, o tipo de doação e a data que aconteceu a doação. Apenas uma pessoa é vinculada a uma doação, e ela pode fazer varias doações ao longo do tempo. 
 * Apadrinhamento: Vai mostrar quem apadrinhou o animal, o valor no apadrinhamento, o padrinho e o animal apadrinhado
 * Padrinho e doador: Todas as informações do padrinho e do doador, Nome, CPF, RG, telefone, e-mail. 
 
