@@ -8,7 +8,7 @@ ajuda a monitorar e a cuidar dos animais e fornecer a eles a oportunidade de con
 * [slides](https://www.canva.com/design/DAGgs3zI63U/M1gPocKAYVmN3dzKIV3jqA/view?utm_content=DAGgs3zI63U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4d32f1c5b4) - SLIDES 
 
 ## As entidades do sistema são:
-* Denúncia: Denúncia vai conter a foto, a descrição do caso da denúncia e o status da denúncia, se ela já foi resolvida ou se ainda está em aberta. Uma denuncia só e condiderada resolvida se o animal já foi adotado. 
+* Denúncia: Denúncia vai conter a foto, a descrição do caso da denúncia e o status da denúncia, se ela já foi resolvida ou se ainda está em aberta. Uma denuncia só é considerada resolvida se o animal já foi adotado. 
 * Denúncia_animal: Tabela intermediária entre denúncia e denúncia animal. Em uma denúncia, pode conter vários animais, como o animal também pode estar em várias denúncias.
 * Animal: Contém todos os detalhes sobre o animal, idade, espécie, status_animal que irá registrar se ele pode ser levado para o abrigo, esta em tratamento ou se ele deverá permanecer em quarentena caso seu problema seja grave ou contagioso.
 * Consulta: Vai conter todas as informações de todos os procedimentos que o animal fez. Irá conter os tratamentos, as vacinas já aplicadas, se ele já passou por uma castração, vai conter o veterinário responsável pelo animal e pelo seu tratamento. 
